@@ -37,7 +37,7 @@ const BookCallSection = () => {
         };
     })(window, "https://app.cal.com/embed/embed.js", "init");
 
-    // Initialize Cal with improved styling
+    // Initialize Cal with native styling
     setTimeout(() => {
       if (window.Cal) {
         window.Cal("init", "intro", { origin: "https://cal.com" });
@@ -46,16 +46,15 @@ const BookCallSection = () => {
           config: { 
             layout: "month_view",
             hideEventTypeDetails: false,
-            theme: "dark"
+            theme: "dark",
+            hideBranding: true
           },
           calLink: "team/firelink/intro",
         });
         window.Cal.ns.intro("ui", {
           hideEventTypeDetails: false,
           layout: "month_view",
-          styles: {
-            branding: { brandColor: "#6366F1" }
-          }
+          hideBranding: true
         });
       }
     }, 100); // Small delay to ensure DOM is ready
@@ -72,9 +71,9 @@ const BookCallSection = () => {
           <p className="text-center text-gray-700 text-lg mb-8">
             Let's discuss how we can transform your business operations
           </p>
-          <div className="rounded-lg overflow-hidden shadow-lg border border-gray-100">
-            <div className="bg-white">
-              <div className="relative w-full" style={{ height: "600px", overflow: "hidden" }}>
+          <div className="rounded-lg overflow-hidden shadow-lg">
+            <div className="bg-black">
+              <div className="relative w-full" style={{ height: "650px", overflow: "hidden" }}>
                 <div 
                   style={{ 
                     width: "100%", 
@@ -83,8 +82,7 @@ const BookCallSection = () => {
                     top: 0,
                     left: 0,
                     overflow: "hidden",
-                    borderRadius: "0.5rem",
-                    borderLeft: "4px solid #6366F1"
+                    borderRadius: "0.5rem"
                   }} 
                   id="my-cal-inline"
                 ></div>
