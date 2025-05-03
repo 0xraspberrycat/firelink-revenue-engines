@@ -1,9 +1,8 @@
-
 import { Check, X } from 'lucide-react';
 
 const AlternativeSolutionsSection = () => {
   return (
-    <section className="bg-gray-50 py-16">
+    <section className="bg-gray-50 py-8">
       <div className="section-container max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-firelink-dark">
           Why Not Just Hire an Agency or Outsource?

@@ -1,3 +1,4 @@
+
 // Card component no longer needed
 import { useEffect } from "react";
 
@@ -65,12 +66,12 @@ const BookCallSection = () => {
   }, []);
 
   return (
-    <section id="book-call" className="py-12 bg-white">
+    <section id="book-call" className="py-8 bg-white">
       <div className="section-container">
         <div className="max-w-4xl mx-auto">
-          <p className="text-center text-gray-700 text-lg mb-8">
-            Let's discuss how we can transform your business operations
-          </p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-firelink-dark">
+            Schedule Your Strategy Call
+          </h2>
           <div className="rounded-lg overflow-hidden">
             <div>
               <div className="relative w-full" style={{ height: "650px" }}>
