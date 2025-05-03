@@ -157,7 +157,7 @@ const ThankYou = () => {
               </a>
             </Button>
             <Button variant="outline" className="flex items-center gap-2" asChild>
-              <a href="tel:+19787337043">
+              <a href="sms:+19787337043">
                 <Phone className="h-4 w-4" />
                 <span>+1 (978) 733-7043</span>
               </a>
