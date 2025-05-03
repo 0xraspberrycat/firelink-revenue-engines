@@ -41,10 +41,10 @@ const BookCallSection = () => {
   );
 };
 
-// Add Cal.com types to window object
+// Update the type declaration to avoid conflicts
 declare global {
   interface Window {
-    Cal?: any;
+    Cal?: unknown;
   }
 }
 
