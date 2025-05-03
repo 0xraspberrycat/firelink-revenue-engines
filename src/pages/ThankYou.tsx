@@ -151,9 +151,9 @@ const ThankYou = () => {
           </h2>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
             <Button variant="outline" className="flex items-center gap-2" asChild>
-              <a href="mailto:paul@jps">
+              <a href="mailto:paul@jpstrategies.xyz">
                 <Mail className="h-4 w-4" />
-                <span>paul@jps</span>
+                <span>paul@jpstrategies.xyz</span>
               </a>
             </Button>
             <Button variant="outline" className="flex items-center gap-2" asChild>
