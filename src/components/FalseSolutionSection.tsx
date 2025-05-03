@@ -27,26 +27,23 @@ const FalseSolutionSection = () => {
           Most businesses try to solve operational chaos with solutions that create more problems
         </p>
         
-        <div className="flex flex-col gap-4 mb-8">
+        <div className="flex flex-col gap-6 mb-10">
           {falseSolutions.map((solution, index) => (
-            <div 
-              key={index} 
-              className="bg-gray-50 p-4 rounded-lg border border-gray-200 shadow-sm"
-            >
-              <div className="flex items-start space-x-2 mb-2">
-                <div className="h-5 w-5 bg-red-100 text-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                  <X className="h-3 w-3" />
-                </div>
-                <h3 className="text-lg font-semibold text-gray-800">{solution.approach}</h3>
+            <div key={index} className="flex items-start space-x-3">
+              <div className="text-red-600 flex-shrink-0 mt-1">
+                <X className="h-5 w-5" />
               </div>
-              <p className="text-sm text-gray-600 pl-7">{solution.problem}</p>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-800">{solution.approach}</h3>
+                <p className="text-gray-600">{solution.problem}</p>
+              </div>
             </div>
           ))}
         </div>
         
-        <div className="bg-gray-50 p-5 rounded-lg border border-gray-200 shadow-sm max-w-2xl mx-auto">
-          <h3 className="text-lg font-semibold mb-2 text-center text-firelink-dark">Why These Solutions Fail</h3>
-          <p className="text-sm text-gray-600 mb-4">
+        <div className="mt-8 max-w-2xl mx-auto">
+          <h3 className="text-lg font-semibold mb-4 text-center text-firelink-dark">Why These Solutions Fail</h3>
+          <p className="text-gray-600">
             These approaches simply add complexity rather than reducing it. They create more 
             dependencies on people rather than creating systems that work independently. The 
             real solution is not adding more human effort—it's building intelligent systems 

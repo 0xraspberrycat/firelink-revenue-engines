@@ -1,7 +1,6 @@
 
 import { Button, buttonVariants } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const SolutionSection = () => {
   const solutions = [
@@ -37,27 +36,19 @@ const SolutionSection = () => {
 
   return (
     <section id="solution" className="py-14 bg-white">
-      <div className="section-container max-w-5xl mx-auto">
+      <div className="section-container max-w-4xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold mb-3 gradient-text text-center">More Money, Less Work: <br />AI-Powered Systems That Scale</h2>
-        <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto text-sm">We build systems that deliver:</p>
+        <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">We build systems that deliver:</p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {solutions.map((solution, index) => (
-            <Card 
-              key={index} 
-              className="border border-gray-100 hover:border-firelink-purple transition-all duration-300 bg-white shadow-sm hover:shadow-md animate-fade-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <CardHeader className="pb-2 pt-4">
-                <CardTitle className="text-base font-bold gradient-text">
-                  {solution.title}
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-gray-600">{solution.description}</p>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="bg-gray-50 p-8 rounded-lg max-w-3xl mx-auto shadow-sm">
+          <div className="space-y-6">
+            {solutions.map((solution, index) => (
+              <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <h3 className="text-lg font-bold gradient-text mb-1">{solution.title}</h3>
+                <p className="text-gray-600">{solution.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

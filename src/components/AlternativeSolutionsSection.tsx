@@ -1,5 +1,5 @@
 
-import { Check, X, DollarSign, Shield } from 'lucide-react';
+import { Check, X } from 'lucide-react';
 
 const AlternativeSolutionsSection = () => {
   return (
@@ -11,9 +11,6 @@ const AlternativeSolutionsSection = () => {
         
         <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
           <h3 className="text-xl font-semibold mb-4 text-firelink-dark">The Real Cost of "Cheap" Solutions</h3>
-          <p className="text-gray-700 mb-4">
-            If this problem is worth solving for your business—if it's truly impacting your revenue and growth—why consider a cheap solution? It's not about the upfront cost, but about the ROI and long-term impact on your business.
-          </p>
           
           <div className="space-y-4 mt-6">
             <div className="flex items-start">
@@ -22,7 +19,7 @@ const AlternativeSolutionsSection = () => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-800">Ownership Issues</h4>
-                <p className="text-sm text-gray-600">Will you actually own the system once the developer leaves, or will they want to keep you on a retainer? Many businesses end up paying perpetually for access to their own systems.</p>
+                <p className="text-gray-600">Will you actually own the system once the developer leaves, or will they want to keep you on a retainer? Many businesses end up paying perpetually for access to their own systems.</p>
               </div>
             </div>
             
@@ -32,7 +29,7 @@ const AlternativeSolutionsSection = () => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-800">Management Burden</h4>
-                <p className="text-sm text-gray-600">You'll spend valuable time managing outsourced developers who don't understand your business context, offsetting any cost savings with your own time investment.</p>
+                <p className="text-gray-600">You'll spend valuable time managing outsourced developers who don't understand your business context, offsetting any cost savings with your own time investment.</p>
               </div>
             </div>
             
@@ -42,7 +39,7 @@ const AlternativeSolutionsSection = () => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-800">The Execution Gap</h4>
-                <p className="text-sm text-gray-600">Developers build what they're told to build. There's a critical gap between "I want something that achieves XYZ outcome" and knowing how to build a system that actually delivers that outcome.</p>
+                <p className="text-gray-600">Developers build what they're told to build. There's a critical gap between "I want something that achieves XYZ outcome" and knowing how to build a system that actually delivers that outcome.</p>
               </div>
             </div>
             
@@ -52,7 +49,7 @@ const AlternativeSolutionsSection = () => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-800">Business Risk</h4>
-                <p className="text-sm text-gray-600">Your sales system directly impacts your revenue. The cost of a poorly implemented system far outweighs the cost of building it properly the first time.</p>
+                <p className="text-gray-600">Your sales system directly impacts your revenue. The cost of a poorly implemented system far outweighs the cost of building it properly the first time.</p>
               </div>
             </div>
           </div>
