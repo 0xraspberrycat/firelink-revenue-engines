@@ -1,14 +1,9 @@
 
 import { Link } from "react-router-dom";
-import { 
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger
-} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, Phone } from "lucide-react";
 import Header from "@/components/Header";
+import { Card, CardContent } from "@/components/ui/card";
 
 const ThankYou = () => {
   return (
@@ -61,12 +56,12 @@ const ThankYou = () => {
             Frequently Asked Questions
           </h2>
           
-          <Accordion type="single" collapsible className="bg-white rounded-lg shadow-md p-6">
-            <AccordionItem value="faq-1">
-              <AccordionTrigger className="text-lg font-semibold">
-                What exactly is included in these services?
-              </AccordionTrigger>
-              <AccordionContent className="pt-4">
+          <div className="space-y-6 bg-white rounded-lg shadow-md p-6">
+            <Card>
+              <div className="p-4 border-b">
+                <h3 className="text-lg font-semibold">What exactly is included in these services?</h3>
+              </div>
+              <CardContent className="pt-4">
                 <p className="mb-4">
                   Our automation services include everything needed to transform your sales process from manual to automated:
                 </p>
@@ -80,14 +75,14 @@ const ThankYou = () => {
                 <p>
                   Unlike other agencies, we don't charge extra for revisions or ongoing support during the implementation period—everything above is included in our standard service package.
                 </p>
-              </AccordionContent>
-            </AccordionItem>
+              </CardContent>
+            </Card>
             
-            <AccordionItem value="faq-2">
-              <AccordionTrigger className="text-lg font-semibold">
-                How soon can I expect to see results?
-              </AccordionTrigger>
-              <AccordionContent className="pt-4">
+            <Card>
+              <div className="p-4 border-b">
+                <h3 className="text-lg font-semibold">How soon can I expect to see results?</h3>
+              </div>
+              <CardContent className="pt-4">
                 <p className="mb-4">
                   Most clients see measurable results within the first 2-4 weeks:
                 </p>
@@ -100,14 +95,14 @@ const ThankYou = () => {
                 <p>
                   The exact timeline depends on your specific situation, but we prioritize quick wins to deliver value immediately while building toward larger automation systems.
                 </p>
-              </AccordionContent>
-            </AccordionItem>
+              </CardContent>
+            </Card>
             
-            <AccordionItem value="faq-3">
-              <AccordionTrigger className="text-lg font-semibold">
-                How is your approach different from others?
-              </AccordionTrigger>
-              <AccordionContent className="pt-4">
+            <Card>
+              <div className="p-4 border-b">
+                <h3 className="text-lg font-semibold">How is your approach different from others?</h3>
+              </div>
+              <CardContent className="pt-4">
                 <p className="mb-4">
                   FireLink differs from other automation providers in three key ways:
                 </p>
@@ -119,14 +114,14 @@ const ThankYou = () => {
                 <p>
                   Most other agencies either build systems that are too complex for you to manage yourself, or they use one-size-fits-all templates. We create custom solutions you can actually understand and use without needing our help forever.
                 </p>
-              </AccordionContent>
-            </AccordionItem>
+              </CardContent>
+            </Card>
             
-            <AccordionItem value="faq-4">
-              <AccordionTrigger className="text-lg font-semibold">
-                What should I prepare before our call?
-              </AccordionTrigger>
-              <AccordionContent className="pt-4">
+            <Card>
+              <div className="p-4 border-b">
+                <h3 className="text-lg font-semibold">What should I prepare before our call?</h3>
+              </div>
+              <CardContent className="pt-4">
                 <p className="mb-4">
                   To make the most of our time together, please consider:
                 </p>
@@ -139,9 +134,9 @@ const ThankYou = () => {
                 <p>
                   No need for detailed documentation—just come prepared to discuss your current situation and what you'd like to improve.
                 </p>
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+              </CardContent>
+            </Card>
+          </div>
         </div>
 
         {/* Contact Section */}

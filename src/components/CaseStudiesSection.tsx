@@ -1,12 +1,7 @@
 
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Card, CardContent } from '@/components/ui/card';
 
 interface CaseStudy {
   name: string;
@@ -75,19 +70,16 @@ const CaseStudiesSection = () => {
       <div className="section-container max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-10 gradient-text text-center">Our Client Success Stories</h2>
         
-        <Accordion type="single" collapsible className="mb-8">
+        <div className="space-y-6">
           {caseStudies.map((study, index) => (
-            <AccordionItem 
-              key={index} 
-              value={`item-${index}`}
+            <Card 
+              key={index}
               className="mb-4 bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
             >
-              <AccordionTrigger className="px-5 py-4 hover:no-underline">
-                <div className="text-left">
-                  <h3 className="text-xl font-semibold text-firelink-dark">{study.name}</h3>
-                </div>
-              </AccordionTrigger>
-              <AccordionContent className="px-5 py-2">
+              <div className="px-5 py-4 border-b border-gray-100">
+                <h3 className="text-xl font-semibold text-firelink-dark">{study.name}</h3>
+              </div>
+              <CardContent className="px-5 py-4">
                 <div className="mb-5">
                   <h4 className="font-medium text-gray-500 mb-3 text-lg">Before:</h4>
                   <ul className="space-y-2">
@@ -110,10 +102,10 @@ const CaseStudiesSection = () => {
                     ))}
                   </ul>
                 </div>
-              </AccordionContent>
-            </AccordionItem>
+              </CardContent>
+            </Card>
           ))}
-        </Accordion>
+        </div>
 
         <div className="text-center mt-10">
           <Button asChild className="cta-button text-lg group">
