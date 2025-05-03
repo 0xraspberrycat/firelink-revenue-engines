@@ -7,6 +7,7 @@ import FalseSolutionSection from "@/components/FalseSolutionSection";
 import SolutionSection from "@/components/SolutionSection";
 import CTASection from "@/components/CTASection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
+import AlternativeSolutionsSection from "@/components/AlternativeSolutionsSection";
 import BookCallSection from "@/components/BookCallSection";
 import Footer from "@/components/Footer";
 
@@ -22,6 +23,7 @@ const Index = () => {
         <SolutionSection />
         <CTASection />
         <CaseStudiesSection />
+        <AlternativeSolutionsSection />
         <BookCallSection />
       </main>
       <Footer />

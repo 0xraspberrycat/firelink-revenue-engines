@@ -27,7 +27,7 @@ const FalseSolutionSection = () => {
           Most businesses try to solve operational chaos with solutions that create more problems
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+        <div className="flex flex-col gap-4 mb-8">
           {falseSolutions.map((solution, index) => (
             <div 
               key={index} 
@@ -46,7 +46,7 @@ const FalseSolutionSection = () => {
         
         <div className="bg-gray-50 p-5 rounded-lg border border-gray-200 shadow-sm max-w-2xl mx-auto">
           <h3 className="text-lg font-semibold mb-2 text-center text-firelink-dark">Why These Solutions Fail</h3>
-          <p className="text-sm text-gray-600">
+          <p className="text-sm text-gray-600 mb-4">
             These approaches simply add complexity rather than reducing it. They create more 
             dependencies on people rather than creating systems that work independently. The 
             real solution is not adding more human effort—it's building intelligent systems 
