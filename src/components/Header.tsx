@@ -23,7 +23,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white z-40 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
@@ -40,11 +40,10 @@ const Header = () => {
                     Home
                   </Link>
                 </li>
-                {/* Video Guide link removed as requested */}
               </ul>
             </nav>
             
-            <Button onClick={scrollToBookCall} className="cta-button">
+            <Button onClick={scrollToBookCall} className="bg-firelink-dark hover:bg-firelink-purple text-white">
               Book a Call
             </Button>
           </div>
@@ -82,13 +81,12 @@ const Header = () => {
                   Home
                 </Link>
               </li>
-              {/* Video Guide link removed from mobile menu too */}
             </ul>
           </nav>
           
           <div className="mt-8">
             <Button 
-              className="cta-button w-full"
+              className="bg-firelink-dark hover:bg-firelink-purple text-white w-full"
               onClick={scrollToBookCall}
             >
               Book a Call
