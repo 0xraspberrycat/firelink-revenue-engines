@@ -15,13 +15,13 @@ const BookCallSection = () => {
   }, []);
 
   return (
-    <section id="book-call" className="py-8 bg-white">
+    <section id="book-call" className="py-8 bg-gradient-to-b from-firelink-light to-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-8">Schedule Your Strategy Call</h2>
+        <h2 className="text-3xl font-bold text-center mb-6">Schedule Your Strategy Call</h2>
         
-        {/* Cal.com embed container with responsive sizing */}
-        <div className="w-full max-w-4xl mx-auto">
-          <div className="calendar-container" style={{ height: "650px", width: "100%" }}>
+        {/* Cal.com embed container with reduced whitespace */}
+        <div className="w-full max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
+          <div className="calendar-container" style={{ height: "600px", width: "100%" }}>
             <Cal 
               namespace="intro"
               calLink="team/firelink/intro"
@@ -40,12 +40,5 @@ const BookCallSection = () => {
     </section>
   );
 };
-
-// Update the type declaration to avoid conflicts
-declare global {
-  interface Window {
-    Cal?: unknown;
-  }
-}
 
 export default BookCallSection;
