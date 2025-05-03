@@ -1,10 +1,9 @@
-
 // Card component no longer needed
 import { useEffect } from "react";
 
 const BookCallSection = () => {
   useEffect(() => {
-    // Cal.com embed initialization function
+    // Cal.com embed initialization function with proper mobile handling
     (function (C, A, L) {
       let p = function (a, ar) {
         a.q.push(ar);
@@ -38,10 +37,12 @@ const BookCallSection = () => {
         };
     })(window, "https://app.cal.com/embed/embed.js", "init");
 
-    // Initialize Cal with native styling
-    setTimeout(() => {
+    // Initialize Cal with mobile optimizations
+    const initCal = () => {
       if (window.Cal) {
         window.Cal("init", "intro", { origin: "https://cal.com" });
+        
+        // Use the latest embed API with improved mobile support
         window.Cal.ns.intro("inline", {
           elementOrSelector: "#my-cal-inline",
           config: { 
@@ -52,13 +53,40 @@ const BookCallSection = () => {
           },
           calLink: "team/firelink/intro",
         });
+        
+        // Set UI parameters with mobile optimizations
         window.Cal.ns.intro("ui", {
           hideEventTypeDetails: false,
           layout: "month_view",
-          hideBranding: true
+          hideBranding: true,
+          styles: {
+            body: {
+              background: "transparent"
+            },
+            branding: {
+              brandColor: "#000000"
+            },
+            enabledDateButton: {
+              backgroundColor: "#000000"
+            }
+          }
         });
       }
-    }, 100); // Small delay to ensure DOM is ready
+    };
+
+    // Wait for DOM and Cal script to load properly
+    if (document.readyState === "complete") {
+      // If document already loaded, initialize with a delay
+      setTimeout(initCal, 300);
+    } else {
+      // Otherwise wait for window to load completely
+      window.addEventListener("load", () => setTimeout(initCal, 300));
+    }
+
+    return () => {
+      window.removeEventListener("load", initCal);
+    };
+  }, []);
 
     return () => {
       // No need for cleanup as we're using inline initialization
@@ -66,27 +94,26 @@ const BookCallSection = () => {
   }, []);
 
   return (
-    <section id="book-call" className="py-8 bg-white">
+    <section id="book-call" className="py-12 bg-white">
       <div className="section-container">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center text-firelink-dark">
-            Schedule Your Strategy Call
-          </h2>
-          <div className="rounded-lg overflow-hidden">
-            <div>
-              <div className="relative w-full" style={{ height: "650px" }}>
-                <div 
-                  style={{ 
-                    width: "100%", 
-                    height: "100%",
-                    position: "absolute",
-                    top: 0,
-                    left: 0
-                  }} 
-                  id="my-cal-inline"
-                ></div>
-              </div>
+          <p className="text-center text-gray-700 text-lg mb-8">
+            Let's discuss how we can transform your business operations
+          </p>
+          <div className="w-full">
+            {/* Responsive container with proper aspect ratio */}
+            <div className="relative w-full" style={{ height: "700px", maxHeight: "80vh" }}>
+              <div 
+                className="absolute inset-0 w-full h-full" 
+                id="my-cal-inline"
+              ></div>
             </div>
+            {/* Fallback for mobile */}
+            <noscript>
+              <p className="text-center mt-4">
+                Please enable JavaScript to view our booking calendar.
+              </p>
+            </noscript>
           </div>
         </div>
       </div>
