@@ -36,25 +36,25 @@ const SolutionSection = () => {
   ];
 
   return (
-    <section id="solution" className="py-20 bg-white">
-      <div className="section-container">
-        <h2 className="section-title text-center">More Money, Less Work: <br />AI-Powered Systems That Scale</h2>
-        <p className="section-subtitle text-center max-w-2xl mx-auto">We build systems that deliver:</p>
+    <section id="solution" className="py-14 bg-white">
+      <div className="section-container max-w-5xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold mb-3 gradient-text text-center">More Money, Less Work: <br />AI-Powered Systems That Scale</h2>
+        <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto text-sm">We build systems that deliver:</p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {solutions.map((solution, index) => (
             <Card 
               key={index} 
-              className="border-2 border-transparent hover:border-firelink-purple transition-all duration-300 bg-white shadow-lg hover:shadow-xl animate-fade-in"
+              className="border border-gray-100 hover:border-firelink-purple transition-all duration-300 bg-white shadow-sm hover:shadow-md animate-fade-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <CardHeader>
-                <CardTitle className="text-xl font-bold gradient-text">
+              <CardHeader className="pb-2 pt-4">
+                <CardTitle className="text-base font-bold gradient-text">
                   {solution.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-700">{solution.description}</p>
+                <p className="text-sm text-gray-600">{solution.description}</p>
               </CardContent>
             </Card>
           ))}
