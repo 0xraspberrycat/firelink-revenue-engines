@@ -10,6 +10,10 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = useIsMobile();
 
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   const scrollToBookCall = () => {
     const element = document.getElementById('book-call');
     if (element) {
