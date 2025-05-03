@@ -1,71 +1,105 @@
 
-import { useState } from 'react';
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from 'lucide-react';
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
+import { cn } from "@/lib/utils";
+import { useMobile } from "@/hooks/use-mobile";
 
 const Header = () => {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const isMobile = useMobile();
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <header className="bg-white py-4 fixed top-0 left-0 right-0 z-50 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center">
-          <div className="flex items-center">
-            <a href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-firelink-dark">Fire<span className="text-firelink-purple">link</span></span>
-            </a>
+    <header className="sticky top-0 bg-white z-40 shadow-sm">
+      <div className="container mx-auto px-4">
+        <div className="flex justify-between items-center h-16">
+          <div className="flex-shrink-0">
+            <Link to="/" className="flex items-center">
+              <span className="font-bold text-xl text-firelink-dark">Firelink</span>
+            </Link>
           </div>
-
-          {/* Desktop menu */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#problem" className="text-gray-600 hover:text-firelink-purple transition-colors">Problem</a>
-            <a href="#solution" className="text-gray-600 hover:text-firelink-purple transition-colors">Solution</a>
-            <a href="#case-studies" className="text-gray-600 hover:text-firelink-purple transition-colors">Case Studies</a>
+          
+          <div className="hidden md:flex items-center space-x-8">
+            <nav>
+              <ul className="flex space-x-8">
+                <li>
+                  <Link to="/" className="text-firelink-dark hover:text-firelink-purple transition-colors">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/video" className="text-firelink-dark hover:text-firelink-purple transition-colors">
+                    Video Guide
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+            
             <Button asChild className="cta-button">
               <a href="#book-call">Book a Call</a>
             </Button>
-          </nav>
-
-          {/* Mobile menu button */}
+          </div>
+          
           <div className="md:hidden">
-            <button 
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-gray-500 hover:text-firelink-purple focus:outline-none"
-            >
-              {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            <button onClick={toggleMenu} className="text-firelink-dark p-2">
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
-
-        {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <nav className="md:hidden pt-4 pb-2 space-y-3">
-            <a 
-              href="#problem" 
-              className="block text-gray-600 hover:text-firelink-purple transition-colors py-2"
-              onClick={() => setMobileMenuOpen(false)}
+      </div>
+      
+      {/* Mobile menu */}
+      <div 
+        className={cn(
+          "md:hidden fixed inset-0 bg-white z-50 transition-transform duration-300 ease-in-out transform",
+          isOpen ? "translate-x-0" : "translate-x-full"
+        )}
+      >
+        <div className="flex justify-end p-4">
+          <button onClick={toggleMenu} className="text-firelink-dark p-2">
+            <X size={24} />
+          </button>
+        </div>
+        
+        <div className="p-4">
+          <nav>
+            <ul className="space-y-4">
+              <li>
+                <Link 
+                  to="/" 
+                  className="block text-firelink-dark hover:text-firelink-purple transition-colors text-lg"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/video" 
+                  className="block text-firelink-dark hover:text-firelink-purple transition-colors text-lg"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Video Guide
+                </Link>
+              </li>
+            </ul>
+          </nav>
+          
+          <div className="mt-8">
+            <Button 
+              asChild 
+              className="cta-button w-full"
+              onClick={() => setIsOpen(false)}
             >
-              Problem
-            </a>
-            <a 
-              href="#solution" 
-              className="block text-gray-600 hover:text-firelink-purple transition-colors py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Solution
-            </a>
-            <a 
-              href="#case-studies" 
-              className="block text-gray-600 hover:text-firelink-purple transition-colors py-2"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Case Studies
-            </a>
-            <Button asChild className="cta-button w-full" onClick={() => setMobileMenuOpen(false)}>
               <a href="#book-call">Book a Call</a>
             </Button>
-          </nav>
-        )}
+          </div>
+        </div>
       </div>
     </header>
   );
