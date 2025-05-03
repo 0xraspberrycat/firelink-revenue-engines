@@ -40,6 +40,16 @@ const Header = () => {
                     Home
                   </Link>
                 </li>
+                <li>
+                  <Link to="/video" className="text-firelink-dark hover:text-firelink-purple transition-colors">
+                    Video
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/thank-you" className="text-firelink-dark hover:text-firelink-purple transition-colors">
+                    Thank You
+                  </Link>
+                </li>
               </ul>
             </nav>
             
@@ -78,6 +88,24 @@ const Header = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   Home
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/video" 
+                  className="block text-firelink-dark hover:text-firelink-purple transition-colors text-lg"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Video
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/thank-you" 
+                  className="block text-firelink-dark hover:text-firelink-purple transition-colors text-lg"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Thank You
                 </Link>
               </li>
             </ul>
