@@ -10,10 +10,6 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isMobile = useIsMobile();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   const scrollToBookCall = () => {
     const element = document.getElementById('book-call');
     if (element) {
@@ -56,7 +52,6 @@ const Header = () => {
         </div>
       </div>
       
-      {/* Mobile menu */}
       <div 
         className={cn(
           "md:hidden fixed inset-0 bg-white z-50 transition-transform duration-300 ease-in-out transform",

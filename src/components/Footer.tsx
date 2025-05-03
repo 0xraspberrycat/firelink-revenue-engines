@@ -49,8 +49,8 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Contact</h3>
             <ul className="space-y-2">
               <li><a href="#book-call" className="text-gray-400 hover:text-firelink-purple transition-colors flex items-center group">Book a Call <ArrowRight className="ml-1 h-4 w-4 group-hover:translate-x-1 transition-transform" /></a></li>
-              <li><a href="mailto:paulxautomation@gmail.com" className="text-gray-400 hover:text-firelink-purple transition-colors flex items-center">
-                <Mail className="mr-2 h-4 w-4" />paulxautomation@gmail.com
+              <li><a href="mailto:paul@jps.ai" className="text-gray-400 hover:text-firelink-purple transition-colors flex items-center">
+                <Mail className="mr-2 h-4 w-4" />paul@jps.ai
               </a></li>
             </ul>
           </div>

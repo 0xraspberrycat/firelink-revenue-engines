@@ -22,7 +22,6 @@ const BookCallSection = () => {
         </h2>
         <div className="bg-white rounded-lg overflow-hidden shadow-lg mb-6" style={{ height: "600px" }}>
           <Cal
-            namespace="intro"
             calLink="team/firelink/intro"
             style={{ width: "100%", height: "100%", overflow: "scroll" }}
             config={{
