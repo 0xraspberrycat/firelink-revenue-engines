@@ -1,7 +1,10 @@
-// Card component no longer needed
+
 import { useEffect } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const BookCallSection = () => {
+  const isMobile = useIsMobile();
+  
   useEffect(() => {
     // Cal.com embed initialization function with proper mobile handling
     (function (C, A, L) {
@@ -46,7 +49,7 @@ const BookCallSection = () => {
         window.Cal.ns.intro("inline", {
           elementOrSelector: "#my-cal-inline",
           config: { 
-            layout: "month_view",
+            layout: isMobile ? "mobile" : "month_view",
             hideEventTypeDetails: false,
             theme: "dark",
             hideBranding: true
@@ -57,7 +60,7 @@ const BookCallSection = () => {
         // Set UI parameters with mobile optimizations
         window.Cal.ns.intro("ui", {
           hideEventTypeDetails: false,
-          layout: "month_view",
+          layout: isMobile ? "mobile" : "month_view",
           hideBranding: true,
           styles: {
             body: {
@@ -86,23 +89,20 @@ const BookCallSection = () => {
     return () => {
       window.removeEventListener("load", initCal);
     };
-  }, []);
-
-    return () => {
-      // No need for cleanup as we're using inline initialization
-    };
-  }, []);
+  }, [isMobile]); // Add isMobile as dependency to update when screen size changes
 
   return (
-    <section id="book-call" className="py-12 bg-white">
+    <section id="book-call" className="py-6 md:py-10 bg-white">
       <div className="section-container">
         <div className="max-w-4xl mx-auto">
-          <p className="text-center text-gray-700 text-lg mb-8">
-            Let's discuss how we can transform your business operations
-          </p>
+          <h2 className="section-title text-center mb-6">Schedule Your Strategy Call</h2>
           <div className="w-full">
-            {/* Responsive container with proper aspect ratio */}
-            <div className="relative w-full" style={{ height: "700px", maxHeight: "80vh" }}>
+            {/* Mobile-optimized container with proper height and scrolling */}
+            <div className="relative w-full overflow-hidden" style={{ 
+              height: isMobile ? "550px" : "650px", 
+              maxHeight: "90vh", 
+              WebkitOverflowScrolling: "touch" 
+            }}>
               <div 
                 className="absolute inset-0 w-full h-full" 
                 id="my-cal-inline"
