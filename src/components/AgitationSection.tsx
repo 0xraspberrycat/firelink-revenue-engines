@@ -14,7 +14,7 @@ const AgitationSection = () => {
           
           <p className="text-gray-700 leading-relaxed text-lg">
             You wake up to missed payments and contract problems. There's a constant anxiety of knowing you can't truly disconnect. 
-            And perhaps worst of all, you've built a business that demands your presence instead of building your wealth.
+            And perhaps worst of all, you've built a business that demands your presence <span className="font-bold">instead of building your wealth</span>.
           </p>
           
           <p className="text-gray-700 leading-relaxed text-lg">

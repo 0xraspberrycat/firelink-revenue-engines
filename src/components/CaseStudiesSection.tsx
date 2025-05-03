@@ -71,40 +71,40 @@ const CaseStudiesSection = () => {
   ];
 
   return (
-    <section id="case-studies" className="py-14 bg-gray-50">
-      <div className="section-container max-w-3xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold mb-8 gradient-text text-center">Our Client Success Stories</h2>
+    <section id="case-studies" className="py-16 bg-gray-50">
+      <div className="section-container max-w-4xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 gradient-text text-center">Our Client Success Stories</h2>
         
         <Accordion type="single" collapsible className="mb-8">
           {caseStudies.map((study, index) => (
             <AccordionItem 
               key={index} 
               value={`item-${index}`}
-              className="mb-3 bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
+              className="mb-4 bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
             >
-              <AccordionTrigger className="px-4 py-3 hover:no-underline">
+              <AccordionTrigger className="px-5 py-4 hover:no-underline">
                 <div className="text-left">
-                  <h3 className="text-lg font-semibold text-firelink-dark">{study.name}</h3>
+                  <h3 className="text-xl font-semibold text-firelink-dark">{study.name}</h3>
                 </div>
               </AccordionTrigger>
-              <AccordionContent className="px-4">
-                <div className="mb-4">
-                  <h4 className="font-medium text-gray-500 mb-2 text-sm">Before:</h4>
-                  <ul className="space-y-1.5">
+              <AccordionContent className="px-5 py-2">
+                <div className="mb-5">
+                  <h4 className="font-medium text-gray-500 mb-3 text-lg">Before:</h4>
+                  <ul className="space-y-2">
                     {study.before.map((item, i) => (
-                      <li key={i} className="text-gray-700 flex items-start text-sm">
-                        <span className="h-4 w-4 bg-red-100 text-red-600 rounded-full flex items-center justify-center mr-2 flex-shrink-0 mt-0.5 text-xs">-</span>
+                      <li key={i} className="text-gray-700 flex items-start text-base">
+                        <span className="h-5 w-5 bg-red-100 text-red-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0 mt-0.5 text-sm">-</span>
                         {item}
                       </li>
                     ))}
                   </ul>
                 </div>
-                <div className="mb-2">
-                  <h4 className="font-medium text-gray-500 mb-2 text-sm">Results:</h4>
-                  <ul className="space-y-1.5">
+                <div className="mb-3">
+                  <h4 className="font-medium text-gray-500 mb-3 text-lg">Results:</h4>
+                  <ul className="space-y-2">
                     {study.results.map((item, i) => (
-                      <li key={i} className="text-gray-700 flex items-start text-sm">
-                        <span className="h-4 w-4 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-2 flex-shrink-0 mt-0.5 text-xs">+</span>
+                      <li key={i} className="text-gray-700 flex items-start text-base">
+                        <span className="h-5 w-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0 mt-0.5 text-sm">+</span>
                         {item}
                       </li>
                     ))}
@@ -115,11 +115,11 @@ const CaseStudiesSection = () => {
           ))}
         </Accordion>
 
-        <div className="text-center mt-8">
-          <Button asChild className="cta-button text-base group">
+        <div className="text-center mt-10">
+          <Button asChild className="cta-button text-lg group">
             <a href="#book-call">
               Book Your Strategy Call
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
             </a>
           </Button>
         </div>

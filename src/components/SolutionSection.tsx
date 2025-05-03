@@ -35,17 +35,17 @@ const SolutionSection = () => {
   ];
 
   return (
-    <section id="solution" className="py-14 bg-gray-50">
+    <section id="solution" className="py-16 bg-gray-50">
       <div className="section-container max-w-5xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold mb-3 gradient-text text-center">More Money, Less Work: <br />AI-Powered Systems That Scale</h2>
-        <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">We build systems that deliver:</p>
+        <h2 className="text-3xl md:text-4xl font-bold mb-3 gradient-text text-center">More Money, Less Work: <br />AI-Powered Systems That Scale</h2>
+        <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto text-xl">We build systems that deliver:</p>
         
-        <div className="bg-white p-8 rounded-lg max-w-4xl mx-auto shadow-sm border border-gray-100">
-          <div className="space-y-8">
+        <div className="bg-white p-10 rounded-lg max-w-5xl mx-auto shadow-sm border border-gray-100">
+          <div className="space-y-10">
             {solutions.map((solution, index) => (
               <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <h3 className="text-lg font-bold gradient-text mb-2">{solution.title}</h3>
-                <p className="text-gray-600">{solution.description}</p>
+                <h3 className="text-xl font-bold gradient-text mb-3">{solution.title}</h3>
+                <p className="text-gray-600 text-lg">{solution.description}</p>
               </div>
             ))}
           </div>
