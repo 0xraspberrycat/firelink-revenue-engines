@@ -9,10 +9,18 @@ const AlternativeSolutionsSection = () => {
           Why Not Just Hire an Agency or Outsource?
         </h2>
         
-        <div className="bg-white p-6 rounded-lg shadow-sm mb-6">
-          <h3 className="text-xl font-semibold mb-4 text-firelink-dark">The Real Cost of "Cheap" Solutions</h3>
-          
-          <div className="space-y-4 mt-6">
+        <div className="bg-white p-8 rounded-lg shadow-sm mb-6">
+          <div className="space-y-6 mt-4">
+            <div className="flex items-start">
+              <div className="mr-3 mt-1 text-red-500">
+                <X className="h-5 w-5" />
+              </div>
+              <div>
+                <h4 className="font-medium text-gray-800">The ROI Question</h4>
+                <p className="text-gray-600">If this problem is truly critical to your business growth, why risk a cheap solution? When something directly impacts your revenue, the ROI from doing it right far exceeds any initial savings.</p>
+              </div>
+            </div>
+            
             <div className="flex items-start">
               <div className="mr-3 mt-1 text-red-500">
                 <X className="h-5 w-5" />
@@ -29,7 +37,7 @@ const AlternativeSolutionsSection = () => {
               </div>
               <div>
                 <h4 className="font-medium text-gray-800">Management Burden</h4>
-                <p className="text-gray-600">You'll spend valuable time managing outsourced developers who don't understand your business context, offsetting any cost savings with your own time investment.</p>
+                <p className="text-gray-600">You'll spend valuable time managing outsourced developers who don't understand your business context. They require constant direction because they don't "get it," offsetting any cost savings with your own time investment.</p>
               </div>
             </div>
             
@@ -54,8 +62,8 @@ const AlternativeSolutionsSection = () => {
             </div>
           </div>
           
-          <div className="mt-6 bg-firelink-light p-4 rounded border-l-4 border-firelink-purple">
-            <p className="text-gray-700 font-medium">
+          <div className="mt-8 bg-firelink-light p-5 rounded border-l-4 border-firelink-purple">
+            <p className="text-gray-800 font-medium">
               When your business depends on these systems to generate revenue, taking shortcuts creates more problems than it solves. The cheapest option today often becomes the most expensive mistake tomorrow.
             </p>
           </div>

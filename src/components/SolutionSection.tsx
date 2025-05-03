@@ -1,5 +1,5 @@
 
-import { Button, buttonVariants } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
 
 const SolutionSection = () => {
@@ -35,16 +35,16 @@ const SolutionSection = () => {
   ];
 
   return (
-    <section id="solution" className="py-14 bg-white">
-      <div className="section-container max-w-4xl mx-auto">
+    <section id="solution" className="py-14 bg-gray-50">
+      <div className="section-container max-w-5xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold mb-3 gradient-text text-center">More Money, Less Work: <br />AI-Powered Systems That Scale</h2>
         <p className="text-center text-gray-700 mb-12 max-w-2xl mx-auto">We build systems that deliver:</p>
         
-        <div className="bg-gray-50 p-8 rounded-lg max-w-3xl mx-auto shadow-sm">
-          <div className="space-y-6">
+        <div className="bg-white p-8 rounded-lg max-w-4xl mx-auto shadow-sm border border-gray-100">
+          <div className="space-y-8">
             {solutions.map((solution, index) => (
               <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-                <h3 className="text-lg font-bold gradient-text mb-1">{solution.title}</h3>
+                <h3 className="text-lg font-bold gradient-text mb-2">{solution.title}</h3>
                 <p className="text-gray-600">{solution.description}</p>
               </div>
             ))}

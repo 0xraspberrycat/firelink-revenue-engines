@@ -23,7 +23,7 @@ const FalseSolutionSection = () => {
         <h2 className="text-2xl md:text-3xl font-bold mb-3 text-center text-firelink-dark">
           The Traditional Approach Doesn't Work
         </h2>
-        <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto text-sm">
+        <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto text-base">
           Most businesses try to solve operational chaos with solutions that create more problems
         </p>
         
@@ -41,9 +41,9 @@ const FalseSolutionSection = () => {
           ))}
         </div>
         
-        <div className="mt-8 max-w-2xl mx-auto">
-          <h3 className="text-lg font-semibold mb-4 text-center text-firelink-dark">Why These Solutions Fail</h3>
-          <p className="text-gray-600">
+        <div className="mt-10 text-center max-w-3xl mx-auto">
+          <h3 className="text-xl font-semibold mb-4 text-firelink-dark">Why These Solutions Fail</h3>
+          <p className="text-gray-700 text-lg leading-relaxed">
             These approaches simply add complexity rather than reducing it. They create more 
             dependencies on people rather than creating systems that work independently. The 
             real solution is not adding more human effort—it's building intelligent systems 
