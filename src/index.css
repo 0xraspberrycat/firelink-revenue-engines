@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -97,5 +100,28 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-firelink-purple to-firelink-secondary bg-clip-text text-transparent;
+  }
+
+  .cta-button {
+    @apply bg-firelink-orange hover:bg-orange-600 text-white font-semibold py-3 px-8 rounded-md transition-all duration-300 shadow-lg hover:shadow-xl;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-6 gradient-text;
+  }
+
+  .section-subtitle {
+    @apply text-lg md:text-xl text-gray-700 mb-12;
   }
 }
