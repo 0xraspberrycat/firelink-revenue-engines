@@ -2,10 +2,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import Header from "@/components/Header";
+import BookCallSection from "@/components/BookCallSection";
 
 const Video = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+      <Header />
       <div className="container mx-auto px-4 py-12">
         {/* VSL Video Section */}
         <div className="max-w-4xl mx-auto mb-12">
@@ -236,8 +239,8 @@ const Video = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="max-w-4xl mx-auto mb-16 bg-gradient-to-r from-firelink-dark to-firelink-secondary text-white p-8 rounded-lg" id="book-call">
+        {/* Book Call Section */}
+        <section id="book-call" className="max-w-4xl mx-auto mb-16 bg-gradient-to-r from-firelink-dark to-firelink-secondary text-white p-8 rounded-lg">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Book Your Implementation Strategy Session</h2>
           
           <div className="mb-8">
@@ -255,16 +258,7 @@ const Video = () => {
             </p>
           </div>
           
-          <div className="w-full max-w-2xl mx-auto">
-            {/* Embedded Calendar */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-lg mb-6">
-              <iframe
-                src="https://cal.com/team/firelink/intro?embed=true&layout=month_view&hideBranding=true"
-                style={{ width: "100%", height: "600px", border: "none" }}
-                title="Book Your Strategy Call"
-              ></iframe>
-            </div>
-          </div>
+          <BookCallSection />
         </section>
       </div>
       

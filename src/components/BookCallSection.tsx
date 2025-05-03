@@ -1,43 +1,31 @@
 
-import { useEffect } from "react";
-import Cal, { getCalApi } from "@calcom/embed-react";
+import { BookerEmbed } from "@calcom/atoms";
+
+type BookerProps = {
+  eventTypeSlug?: string;
+  calUsername?: string;
+};
 
 const BookCallSection = () => {
-  useEffect(() => {
-    (async function () {
-      const cal = await getCalApi({"namespace": "intro"});
-      cal("ui", {
-        "hideEventTypeDetails": false,
-        "layout": "month_view",
-        "theme": "dark"
-      });
-    })();
-  }, []);
-
+  const eventSlug = "intro"; // Your Cal.com event slug
+  const calUsername = "team/firelink"; // Your Cal.com username or team name
+  
   return (
-    <section id="book-call" className="py-8 bg-gradient-to-b from-firelink-light to-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-6">Schedule Your Strategy Call</h2>
-        
-        {/* Cal.com embed container with reduced whitespace */}
-        <div className="w-full max-w-4xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden">
-          <div className="calendar-container" style={{ height: "600px", width: "100%" }}>
-            <Cal 
-              namespace="intro"
-              calLink="team/firelink/intro"
-              style={{
-                width: "100%",
-                height: "100%",
-                overflow: "auto"
-              }}
-              config={{
-                "layout": "month_view"
-              }}
-            />
-          </div>
-        </div>
+    <div className="w-full max-w-2xl mx-auto">
+      <div className="bg-white rounded-lg overflow-hidden shadow-lg mb-6">
+        <BookerEmbed
+          eventSlug={eventSlug}
+          view="month_view"
+          username={calUsername}
+          customClassNames={{
+            bookerContainer: "border-subtle border",
+          }}
+          onCreateBookingSuccess={() => {
+            console.log("booking created successfully");
+          }}
+        />
       </div>
-    </section>
+    </div>
   );
 };
 
