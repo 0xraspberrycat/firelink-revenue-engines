@@ -40,16 +40,6 @@ const Header = () => {
                     Home
                   </Link>
                 </li>
-                <li>
-                  <Link to="/video" className="text-firelink-dark hover:text-firelink-purple transition-colors">
-                    Video
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/thank-you" className="text-firelink-dark hover:text-firelink-purple transition-colors">
-                    Thank You
-                  </Link>
-                </li>
               </ul>
             </nav>
             
