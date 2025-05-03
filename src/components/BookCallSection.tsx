@@ -71,18 +71,16 @@ const BookCallSection = () => {
           <p className="text-center text-gray-700 text-lg mb-8">
             Let's discuss how we can transform your business operations
           </p>
-          <div className="rounded-lg overflow-hidden shadow-lg">
-            <div className="bg-black">
-              <div className="relative w-full" style={{ height: "650px", overflow: "hidden" }}>
+          <div className="rounded-lg overflow-hidden">
+            <div>
+              <div className="relative w-full" style={{ height: "650px" }}>
                 <div 
                   style={{ 
                     width: "100%", 
-                    height: "100%", 
+                    height: "100%",
                     position: "absolute",
                     top: 0,
-                    left: 0,
-                    overflow: "hidden",
-                    borderRadius: "0.5rem"
+                    left: 0
                   }} 
                   id="my-cal-inline"
                 ></div>
