@@ -8,9 +8,8 @@ const BookCallSection = () => {
       const cal = await getCalApi({"namespace": "intro"});
       cal("ui", {
         "hideEventTypeDetails": false,
-        "layout": "column_view",
-        "theme": "dark",
-        "hideBranding": true
+        "layout": "month_view",
+        "theme": "dark"
       });
     })();
   }, []);
@@ -32,7 +31,7 @@ const BookCallSection = () => {
                 overflow: "auto"
               }}
               config={{
-                "layout": "column_view"
+                "layout": "month_view"
               }}
             />
           </div>
