@@ -4,7 +4,7 @@ import { ArrowRight } from 'lucide-react';
 
 const CTASection = ({ id = "cta" }: { id?: string }) => {
   return (
-    <section id={id} className="py-8 bg-firelink-dark text-white">
+    <section id={id} className="py-6 bg-firelink-dark text-white">
       <div className="section-container max-w-4xl mx-auto">
         <div className="max-w-2xl mx-auto text-center">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
