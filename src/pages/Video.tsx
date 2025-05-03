@@ -7,6 +7,19 @@ const Video = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4 py-12">
+        {/* VSL Video Section */}
+        <div className="max-w-4xl mx-auto mb-12">
+          <div className="aspect-video w-full bg-black rounded-lg overflow-hidden shadow-lg">
+            <iframe 
+              src="https://www.youtube.com/embed/kZIsBrQAYrE?autoplay=1"
+              title="Sales Automation System"
+              className="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+
         {/* Hero Section */}
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h1 className="text-3xl md:text-5xl font-bold mb-6 gradient-text">
