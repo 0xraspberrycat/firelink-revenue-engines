@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from 'lucide-react';
 
 const CTASection = ({ id = "cta" }: { id?: string }) => {
+  const scrollToBookCall = () => {
+    const element = document.getElementById('book-call');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id={id} className="py-6 bg-firelink-dark text-white">
       <div className="section-container max-w-4xl mx-auto">
@@ -13,11 +20,9 @@ const CTASection = ({ id = "cta" }: { id?: string }) => {
           <p className="text-md mb-4 opacity-90 max-w-xl mx-auto">
             Book a 45-minute strategy call to see exactly how our AI-powered systems could transform your operational chaos into predictable revenue.
           </p>
-          <Button asChild className="cta-button text-base group">
-            <a href="#book-call">
-              Book Your Strategy Call
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+          <Button onClick={scrollToBookCall} className="cta-button text-base group">
+            Book Your Strategy Call
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
       </div>

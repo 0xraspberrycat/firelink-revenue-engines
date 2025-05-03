@@ -6,10 +6,17 @@ import Header from "@/components/Header";
 import BookCallSection from "@/components/BookCallSection";
 
 const Video = () => {
+  const scrollToBookCall = () => {
+    const element = document.getElementById('book-call');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       <Header />
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 pt-24 pb-12">
         {/* VSL Video Section */}
         <div className="max-w-4xl mx-auto mb-12">
           <div className="aspect-video w-full bg-black rounded-lg overflow-hidden shadow-lg">
@@ -40,11 +47,9 @@ const Video = () => {
               team member – all by implementing the Revenue Engine system.
             </p>
             
-            <Button asChild className="cta-button group text-base">
-              <a href="#book-call">
-                Book Your Strategy Session
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+            <Button onClick={scrollToBookCall} className="cta-button group text-base">
+              Book Your Strategy Session
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </div>
         </div>
@@ -177,11 +182,9 @@ const Video = () => {
             </div>
 
             <div className="mt-8 text-center">
-              <Button asChild className="cta-button group text-base">
-                <a href="#book-call">
-                  Get Your Implementation Plan
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </a>
+              <Button onClick={scrollToBookCall} className="cta-button group text-base">
+                Get Your Implementation Plan
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
           </div>
@@ -240,26 +243,7 @@ const Video = () => {
         </section>
 
         {/* Book Call Section */}
-        <section id="book-call" className="max-w-4xl mx-auto mb-16 bg-gradient-to-r from-firelink-dark to-firelink-secondary text-white p-8 rounded-lg">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Book Your Implementation Strategy Session</h2>
-          
-          <div className="mb-8">
-            <p className="mb-4">In this call, we'll:</p>
-            <ul className="list-disc pl-6 mb-6 space-y-2">
-              <li>Identify the leaks in your current process that are costing you deals</li>
-              <li>Our technical recommendations for your existing tech stack and team structure</li>
-              <li>See if the Revenue Engine would be a good fit for your business</li>
-              <li>Provide you with a clear implementation plan and timeline</li>
-              <li>Give you a straightforward price quote if you want us to build it for you</li>
-            </ul>
-            
-            <p className="text-xl font-semibold text-center">
-              You'll walk away with $1,500 in consulting value that you can immediately apply to your business.
-            </p>
-          </div>
-          
-          <BookCallSection />
-        </section>
+        <BookCallSection />
       </div>
       
       <footer className="bg-firelink-dark text-white py-8">

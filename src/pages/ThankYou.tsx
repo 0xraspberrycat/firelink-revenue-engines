@@ -8,11 +8,13 @@ import {
 } from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, Phone } from "lucide-react";
+import Header from "@/components/Header";
 
 const ThankYou = () => {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      <div className="container mx-auto px-4 py-12">
+      <Header />
+      <div className="container mx-auto px-4 pt-24 py-12">
         {/* Confirmation Section */}
         <div className="max-w-3xl mx-auto text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-firelink-dark">
@@ -148,13 +150,17 @@ const ThankYou = () => {
             Have questions before our call?
           </h2>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-            <Button variant="outline" className="flex items-center gap-2">
-              <Mail className="h-4 w-4" />
-              <span>ermias@jpstrategies.xyz</span>
+            <Button variant="outline" className="flex items-center gap-2" asChild>
+              <a href="mailto:paul@jps">
+                <Mail className="h-4 w-4" />
+                <span>paul@jps</span>
+              </a>
             </Button>
-            <Button variant="outline" className="flex items-center gap-2">
-              <Phone className="h-4 w-4" />
-              <span>+1 (612) 225-4718</span>
+            <Button variant="outline" className="flex items-center gap-2" asChild>
+              <a href="tel:+16122254718">
+                <Phone className="h-4 w-4" />
+                <span>+1 (612) 225-4718</span>
+              </a>
             </Button>
           </div>
         </div>
@@ -165,7 +171,6 @@ const ThankYou = () => {
           <p>&copy; {new Date().getFullYear()} Firelink. All rights reserved.</p>
           <div className="mt-4 flex justify-center gap-4">
             <Link to="/" className="text-white hover:text-firelink-purple transition-colors">Home</Link>
-            <Link to="/video" className="text-white hover:text-firelink-purple transition-colors">Video Guide</Link>
           </div>
         </div>
       </footer>

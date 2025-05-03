@@ -14,8 +14,16 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
+  const scrollToBookCall = () => {
+    const element = document.getElementById('book-call');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      if (isOpen) setIsOpen(false);
+    }
+  };
+
   return (
-    <header className="sticky top-0 bg-white z-40 shadow-sm">
+    <header className="fixed top-0 left-0 right-0 bg-white z-40 shadow-sm">
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
@@ -36,8 +44,8 @@ const Header = () => {
               </ul>
             </nav>
             
-            <Button asChild className="cta-button">
-              <a href="#book-call">Book a Call</a>
+            <Button onClick={scrollToBookCall} className="cta-button">
+              Book a Call
             </Button>
           </div>
           
@@ -80,11 +88,10 @@ const Header = () => {
           
           <div className="mt-8">
             <Button 
-              asChild 
               className="cta-button w-full"
-              onClick={() => setIsOpen(false)}
+              onClick={scrollToBookCall}
             >
-              <a href="#book-call">Book a Call</a>
+              Book a Call
             </Button>
           </div>
         </div>
