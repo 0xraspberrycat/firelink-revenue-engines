@@ -14,10 +14,10 @@ const Video = () => {
         <div className="max-w-4xl mx-auto mb-12">
           <div className="aspect-video w-full bg-black rounded-lg overflow-hidden shadow-lg">
             <iframe 
-              src="https://www.youtube.com/embed/kZIsBrQAYrE?autoplay=1"
+              src="https://www.youtube.com/embed/kZIsBrQAYrE"
               title="Sales Automation System"
               className="w-full h-full"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowFullScreen
             ></iframe>
           </div>

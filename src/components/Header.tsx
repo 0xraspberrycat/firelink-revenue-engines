@@ -32,11 +32,7 @@ const Header = () => {
                     Home
                   </Link>
                 </li>
-                <li>
-                  <Link to="/video" className="text-firelink-dark hover:text-firelink-purple transition-colors">
-                    Video Guide
-                  </Link>
-                </li>
+                {/* Video Guide link removed as requested */}
               </ul>
             </nav>
             
@@ -78,15 +74,7 @@ const Header = () => {
                   Home
                 </Link>
               </li>
-              <li>
-                <Link 
-                  to="/video" 
-                  className="block text-firelink-dark hover:text-firelink-purple transition-colors text-lg"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Video Guide
-                </Link>
-              </li>
+              {/* Video Guide link removed from mobile menu too */}
             </ul>
           </nav>
           
