@@ -1,4 +1,4 @@
-import { Card } from "@/components/ui/card";
+// Card component no longer needed
 import { useEffect } from "react";
 
 const BookCallSection = () => {
@@ -37,16 +37,28 @@ const BookCallSection = () => {
         };
     })(window, "https://app.cal.com/embed/embed.js", "init");
 
-    // Initialize Cal after function is defined
-    if (window.Cal) {
-      window.Cal("init", "intro", { origin: "https://cal.com" });
-      window.Cal.ns.intro("inline", {
-        elementOrSelector: "#my-cal-inline",
-        config: { layout: "month_view" },
-        calLink: "team/firelink/intro",
-      });
-      window.Cal.ns.intro("ui", { hideEventTypeDetails: false, layout: "month_view" });
-    }
+    // Initialize Cal with improved styling
+    setTimeout(() => {
+      if (window.Cal) {
+        window.Cal("init", "intro", { origin: "https://cal.com" });
+        window.Cal.ns.intro("inline", {
+          elementOrSelector: "#my-cal-inline",
+          config: { 
+            layout: "month_view",
+            hideEventTypeDetails: false,
+            theme: "dark"
+          },
+          calLink: "team/firelink/intro",
+        });
+        window.Cal.ns.intro("ui", {
+          hideEventTypeDetails: false,
+          layout: "month_view",
+          styles: {
+            branding: { brandColor: "#6366F1" }
+          }
+        });
+      }
+    }, 100); // Small delay to ensure DOM is ready
 
     return () => {
       // No need for cleanup as we're using inline initialization
@@ -56,14 +68,29 @@ const BookCallSection = () => {
   return (
     <section id="book-call" className="py-12 bg-white">
       <div className="section-container">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="section-title text-center mb-2">Book Your Strategy Call</h2>
-          <p className="text-center text-gray-600 mb-6">
+        <div className="max-w-4xl mx-auto">
+          <p className="text-center text-gray-700 text-lg mb-8">
             Let's discuss how we can transform your business operations
           </p>
-          <Card className="shadow-xl border-t-4 border-t-firelink-purple">
-            <div style={{ width: "100%", height: "600px", overflow: "scroll" }} id="my-cal-inline"></div>
-          </Card>
+          <div className="rounded-lg overflow-hidden shadow-lg border border-gray-100">
+            <div className="bg-white">
+              <div className="relative w-full" style={{ height: "600px", overflow: "hidden" }}>
+                <div 
+                  style={{ 
+                    width: "100%", 
+                    height: "100%", 
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    overflow: "hidden",
+                    borderRadius: "0.5rem",
+                    borderLeft: "4px solid #6366F1"
+                  }} 
+                  id="my-cal-inline"
+                ></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
