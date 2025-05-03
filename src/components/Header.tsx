@@ -40,6 +40,11 @@ const Header = () => {
                     Home
                   </Link>
                 </li>
+                <li>
+                  <Link to="/clients" className="text-firelink-dark hover:text-firelink-purple transition-colors">
+                    Clients
+                  </Link>
+                </li>
               </ul>
             </nav>
             
@@ -78,6 +83,15 @@ const Header = () => {
                   onClick={() => setIsOpen(false)}
                 >
                   Home
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/clients" 
+                  className="block text-firelink-dark hover:text-firelink-purple transition-colors text-lg"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Clients
                 </Link>
               </li>
             </ul>
