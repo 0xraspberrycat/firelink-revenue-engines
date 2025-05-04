@@ -1,5 +1,15 @@
 
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from 'lucide-react';
+
 const AgitationSection = () => {
+  const scrollToBookCall = () => {
+    const element = document.getElementById('book-call');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="bg-gray-100 py-14">
       <div className="section-container max-w-4xl mx-auto">
@@ -28,6 +38,13 @@ const AgitationSection = () => {
             impact by just two metrics: <span className="underline">SPEED</span> and <span className="underline">MONEY</span>. 
             Our success is tied directly to the revenue we generate for you—not fancy tech implementations or flashy features.
           </p>
+          
+          <div className="mt-8 text-center">
+            <Button onClick={scrollToBookCall} className="bg-firelink-dark text-white hover:bg-firelink-dark/90 text-base group">
+              Book Your Strategy Call
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
         </div>
       </div>
     </section>

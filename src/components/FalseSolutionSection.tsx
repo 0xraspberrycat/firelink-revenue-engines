@@ -1,5 +1,6 @@
 
-import { X } from 'lucide-react';
+import { X, ArrowRight } from 'lucide-react';
+import { Button } from "@/components/ui/button";
 
 const FalseSolutionSection = () => {
   const falseSolutions = [
@@ -16,6 +17,13 @@ const FalseSolutionSection = () => {
       problem: "Quickly becomes outdated and relies on perfect execution by team members"
     }
   ];
+
+  const scrollToBookCall = () => {
+    const element = document.getElementById('book-call');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="bg-white py-14">
@@ -49,6 +57,13 @@ const FalseSolutionSection = () => {
             real solution is not adding more human effort—it's building intelligent systems 
             that eliminate the need for constant human intervention.
           </p>
+          
+          <div className="mt-8 text-center">
+            <Button onClick={scrollToBookCall} className="bg-firelink-dark text-white hover:bg-firelink-dark/90 text-base group">
+              Book Your Strategy Call
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
         </div>
       </div>
     </section>
