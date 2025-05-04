@@ -34,7 +34,7 @@ const AlternativeSolutionsSection = () => {
                 
                 <div className="bg-gray-100 p-6 rounded-lg my-6">
                   <img 
-                    src="/public/lovable-uploads/946d41d0-77d5-4803-abe2-75f17c41c8e6.png" 
+                    src="/lovable-uploads/946d41d0-77d5-4803-abe2-75f17c41c8e6.png" 
                     alt="Fiverr Quote" 
                     className="w-full rounded-lg shadow-sm"
                   />
