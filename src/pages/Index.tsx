@@ -5,6 +5,7 @@ import ProblemSection from "@/components/ProblemSection";
 import AgitationSection from "@/components/AgitationSection";
 import FalseSolutionSection from "@/components/FalseSolutionSection";
 import SolutionSection from "@/components/SolutionSection";
+import CTASection from "@/components/CTASection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
 import AlternativeSolutionsSection from "@/components/AlternativeSolutionsSection";
 import BookCallSection from "@/components/BookCallSection";
@@ -20,6 +21,7 @@ const Index = () => {
         <AgitationSection />
         <FalseSolutionSection />
         <SolutionSection />
+        <CTASection />
         <CaseStudiesSection />
         <AlternativeSolutionsSection />
         <BookCallSection />
