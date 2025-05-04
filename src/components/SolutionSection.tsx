@@ -78,9 +78,9 @@ const SolutionSection = () => {
                   <h3 className="text-xl font-bold gradient-text">{solution.title}</h3>
                 </div>
                 <div className="pl-9">
-                  <p className="text-gray-700 mb-2"><span className="font-medium">Setup:</span> {solution.setup}</p>
-                  <p className="text-gray-700 mb-2"><span className="font-medium">Payoff:</span> {solution.payoff}</p>
-                  <p className="text-gray-700"><span className="font-medium">Tiedown:</span> {solution.tiedown}</p>
+                  <p className="text-gray-700 mb-2">{solution.setup}</p>
+                  <p className="text-gray-700 mb-2">{solution.payoff}</p>
+                  <p className="text-gray-700">{solution.tiedown}</p>
                 </div>
               </div>
             ))}
