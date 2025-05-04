@@ -6,45 +6,31 @@ const SolutionSection = () => {
   const solutions = [
     {
       title: "Wake Up to New Qualified Appointments",
-      setup: "What if there was a tireless assistant who worked 24/7, never took vacations, and had perfect memory of every conversation with every prospect?",
-      payoff: "Our AI-powered lead response system engages with prospects instantly, nurtures them based on their unique needs, and books meetings on your calendar while you sleep.",
-      tiedown: "We've invested over $300,000 developing this system that handles your prospects better than most salespeople. How much more could you earn if quality appointments appeared on your calendar without you spending a minute finding them?"
+      description: "What if there was a tireless assistant who worked 24/7, never took vacations, and had perfect memory of every conversation with every prospect? Our AI-powered lead response system engages with prospects instantly, nurtures them based on their unique needs, and books meetings on your calendar while you sleep. We've invested over $300,000 developing this system that handles your prospects better than most salespeople. How much more could you earn if quality appointments appeared on your calendar without you spending a minute finding them?"
     },
     {
       title: "Effortless Knowledge Transfer",
-      setup: "Picture never losing critical information when a team member is sick, quits, or goes on vacation—because every bit of valuable knowledge is captured and instantly accessible.",
-      payoff: "Our system automatically transcribes, categorizes, and stores every client interaction so nothing falls through the cracks, even during team transitions.",
-      tiedown: "Most businesses lose thousands each month through knowledge gaps when team members transition. Wouldn't it be valuable to never worry about this expensive problem again?"
+      description: "Picture never losing critical information when a team member is sick, quits, or goes on vacation—because every bit of valuable knowledge is captured and instantly accessible. Our system automatically transcribes, categorizes, and stores every client interaction so nothing falls through the cracks, even during team transitions. Most businesses lose thousands each month through knowledge gaps when team members transition. Wouldn't it be valuable to never worry about this expensive problem again?"
     },
     {
       title: "Deals That Close Themselves",
-      setup: "Imagine if you could identify the exact moment a prospect is most likely to buy, and instantly deliver the perfect proposal without you having to lift a finger.",
-      payoff: "Our intelligent proposal system triggers at the perfect psychological moment, generating custom-tailored offers that maximize your close rate.",
-      tiedown: "Our clients have seen up to 37% increases in conversion rates using this system alone. How much more revenue would that mean for your business?"
+      description: "Imagine if you could identify the exact moment a prospect is most likely to buy, and instantly deliver the perfect proposal without you having to lift a finger. Our intelligent proposal system triggers at the perfect psychological moment, generating custom-tailored offers that maximize your close rate. Our clients have experienced increased conversion rates using this system. How much more revenue would that mean for your business?"
     },
     {
       title: "Revenue That Grows While You Sleep",
-      setup: "What if your business had a brilliant strategist working 24/7, analyzing your clients and identifying the perfect moments to offer additional services?",
-      payoff: "Our upsell detection system automatically identifies clients ready for additional services and triggers perfectly-timed offers that increase lifetime value.",
-      tiedown: "This single component has added an average of $2,850 per client for our customers. With your current client base, how transformative would that be?"
+      description: "What if your business had a brilliant strategist working 24/7, analyzing your clients and identifying the perfect moments to offer additional services? Our upsell detection system automatically identifies clients ready for additional services and triggers perfectly-timed offers that increase lifetime value. This component has added significant revenue per client for our customers. With your current client base, how transformative would that be?"
     },
     {
       title: "Seamless Client Experience",
-      setup: "Imagine if every client interaction felt like your business had a perfect memory—never asking for the same information twice, always knowing exactly where things stand.",
-      payoff: "Our context preservation system ensures flawless handoffs between team members with complete information transfer.",
-      tiedown: "Clients pay premium prices for premium experiences. How much more could you charge if your service felt magically seamless compared to your competitors?"
+      description: "Imagine if every client interaction felt like your business had a perfect memory—never asking for the same information twice, always knowing exactly where things stand. Our context preservation system ensures flawless handoffs between team members with complete information transfer. Clients pay premium prices for premium experiences. How much more could you charge if your service felt magically seamless compared to your competitors?"
     },
     {
       title: "Freedom From Payment Chasing",
-      setup: "Picture never having an awkward payment conversation again. No more reminders, no more excuses, just money appearing in your account like clockwork.",
-      payoff: "Our automated payment security system reduces defaults and late payments without your involvement.",
-      tiedown: "The average business loses 7-10% of revenue to payment issues. How much would you save if that problem simply disappeared?"
+      description: "Picture never having an awkward payment conversation again. No more reminders, no more excuses, just money appearing in your account like clockwork. Our automated payment security system reduces defaults and late payments without your involvement. The average business loses 7-10% of revenue to payment issues. How much would you save if that problem simply disappeared?"
     },
     {
       title: "Total Business Visibility",
-      setup: "What if you had a brilliant analyst watching every aspect of your business 24/7, alerting you only when something needs your attention?",
-      payoff: "Our business command center monitors critical metrics and alerts you to problems before they affect your bottom line.",
-      tiedown: "Most business problems cost 10x more to fix than to prevent. Wouldn't you sleep better knowing potential issues are caught before they become expensive disasters?"
+      description: "What if you had a brilliant analyst watching every aspect of your business 24/7, alerting you only when something needs your attention? Our business command center monitors critical metrics and alerts you to problems before they affect your bottom line. Most business problems cost 10x more to fix than to prevent. Wouldn't you sleep better knowing potential issues are caught before they become expensive disasters?"
     }
   ];
 
@@ -66,6 +52,18 @@ const SolutionSection = () => {
           <p className="mb-4">This isn't fantasy—it's what happens when you replace human dependencies with intelligent systems that work around the clock.</p>
           <p className="text-xl font-medium">This is what we build for you: a complete Revenue Engine that runs without you.</p>
         </div>
+
+        <div className="bg-white p-8 rounded-lg shadow-sm mb-10">
+          <h3 className="text-2xl font-semibold mb-4">What most businesses do: Hire cheap labor that costs a fortune</h3>
+          <p className="text-gray-700 mb-6">
+            Most business owners try hiring multiple VAs and appointment setters at $4/hour each. But they quickly discover the hidden costs: training time, management headaches, quality control issues, and constant turnover. Even at $4/hour per person, a team of 20 ends up costing far more in real terms when you factor in your time and lost opportunities.
+          </p>
+          
+          <h3 className="text-2xl font-semibold mb-4">What we deliver: The equivalent of an entire team for one fixed price</h3>
+          <p className="text-gray-700 mb-6">
+            With Firelink, you get the output equivalent of dozens of appointment setters and VAs working 24/7 for a TOTAL of $3-7/hour. Our systems never sleep, never quit, never have "personal emergencies," and work at peak performance every single day.
+          </p>
+        </div>
         
         <h3 className="text-2xl font-semibold mb-6 text-center">Here's what your new Revenue Engine delivers:</h3>
         
@@ -78,9 +76,7 @@ const SolutionSection = () => {
                   <h3 className="text-xl font-bold gradient-text">{solution.title}</h3>
                 </div>
                 <div className="pl-9">
-                  <p className="text-gray-700 mb-2">{solution.setup}</p>
-                  <p className="text-gray-700 mb-2">{solution.payoff}</p>
-                  <p className="text-gray-700">{solution.tiedown}</p>
+                  <p className="text-gray-700">{solution.description}</p>
                 </div>
               </div>
             ))}
