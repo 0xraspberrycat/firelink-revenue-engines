@@ -44,15 +44,15 @@ const SolutionSection = () => {
   return (
     <section id="solution" className="py-16 bg-gray-50">
       <div className="section-container max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-3 gradient-text text-center">More Money, Less Work: <br />The Revenue Engine Solution</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 gradient-text text-center">More Money, Less Work: <br />The Revenue Engine Solution</h2>
         
-        <div className="text-center text-gray-700 mb-8 max-w-3xl mx-auto">
-          <p className="text-xl mb-4">Imagine having a business that makes money while you sleep...</p>
-          <p className="mb-4">Imagine waking up to find new qualified appointments already booked on your calendar. Client documents perfectly organized without you lifting a finger. Proposals that generated and sent themselves at precisely the right moment. And payments that arrived automatically—no chasing, no hassle.</p>
-          <p className="mb-4">This isn't fantasy—it's what happens when you replace human dependencies with intelligent systems that work around the clock.</p>
-          <p className="text-xl font-medium mb-10">This is what we build for you: a complete Revenue Engine that runs without you.</p>
+        <div className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+          <p className="text-xl mb-6">Imagine having a business that makes money while you sleep...</p>
+          <p className="mb-6 text-lg">Imagine waking up to find new qualified appointments already booked on your calendar. Client documents perfectly organized without you lifting a finger. Proposals that generated and sent themselves at precisely the right moment. And payments that arrived automatically—no chasing, no hassle.</p>
+          <p className="mb-6 text-lg">This isn't fantasy—it's what happens when you replace human dependencies with intelligent systems that work around the clock.</p>
+          <p className="text-xl font-semibold mb-12">This is what we build for you: a complete Revenue Engine that runs without you.</p>
         </div>
-
+        
         <div className="bg-white p-8 rounded-lg shadow-sm mb-10">
           <h3 className="text-2xl font-semibold mb-4">What Most Businesses Do: Hire Cheap Labor That Costs a Fortune</h3>
           <p className="text-gray-700 mb-6">
