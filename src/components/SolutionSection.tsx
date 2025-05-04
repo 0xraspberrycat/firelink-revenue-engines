@@ -56,7 +56,7 @@ const SolutionSection = () => {
         <div className="bg-white p-8 rounded-lg shadow-sm mb-10">
           <h3 className="text-2xl font-semibold mb-4">What Most Businesses Do: Hire Cheap Labor That Costs a Fortune</h3>
           <p className="text-gray-700 mb-6">
-            Most business owners try hiring multiple VAs and appointment setters at $4/hour each. But they quickly discover the hidden costs: training time, management headaches, quality control issues, and constant turnover. Even at $4/hour per person, a team of 20 ends up costing far more in real terms when you factor in your time and lost opportunities.
+            Most business owners try hiring teams of Virtual Assistants at $4/hour each and "performance based" appointment setters. But they quickly discover the hidden costs: training time, management headaches, quality control issues, and constant turnover. Even at $4/hour per person, a team of 20 ends up costing far more in real terms when you factor in your time and lost opportunities.
           </p>
           
           <h3 className="text-2xl font-semibold mb-4">What We Deliver: The Equivalent of an Entire Team for One Fixed Price</h3>
