@@ -1,5 +1,5 @@
 
-import { Check } from 'lucide-react';
+import { X } from 'lucide-react';
 
 const ProblemSection = () => {
   const problems = [
@@ -25,7 +25,7 @@ const ProblemSection = () => {
                 className="flex items-start space-x-3 bg-white/5 p-4 rounded-md animate-fade-in"
                 style={{ animationDelay: `${index * 0.15}s` }}
               >
-                <Check className="h-6 w-6 text-firelink-purple flex-shrink-0 mt-0.5" />
+                <X className="h-6 w-6 text-red-500 flex-shrink-0 mt-0.5" />
                 <p className="text-lg">{problem}</p>
               </div>
             ))}

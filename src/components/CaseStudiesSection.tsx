@@ -1,5 +1,5 @@
 
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -85,7 +85,9 @@ const CaseStudiesSection = () => {
                   <ul className="space-y-2">
                     {study.before.map((item, i) => (
                       <li key={i} className="text-gray-700 flex items-start text-base">
-                        <span className="h-5 w-5 bg-red-100 text-red-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0 mt-0.5 text-sm">-</span>
+                        <span className="h-5 w-5 bg-red-100 text-red-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0 mt-0.5 text-sm">
+                          <X className="h-3 w-3" />
+                        </span>
                         {item}
                       </li>
                     ))}

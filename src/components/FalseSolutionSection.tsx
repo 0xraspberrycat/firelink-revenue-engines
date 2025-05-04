@@ -29,8 +29,8 @@ const FalseSolutionSection = () => {
         
         <div className="flex flex-col gap-8 mb-12">
           {falseSolutions.map((solution, index) => (
-            <div key={index} className="flex items-start space-x-4">
-              <div className="text-red-600 flex-shrink-0 mt-1">
+            <div key={index} className="flex items-start space-x-4 bg-gray-50 p-5 rounded-md animate-fade-in" style={{ animationDelay: `${index * 0.15}s` }}>
+              <div className="text-red-500 flex-shrink-0 mt-1">
                 <X className="h-6 w-6" />
               </div>
               <div>
@@ -41,7 +41,7 @@ const FalseSolutionSection = () => {
           ))}
         </div>
         
-        <div className="mt-12 text-center max-w-4xl mx-auto">
+        <div className="mt-12 bg-firelink-light p-8 rounded-lg border-l-4 border-firelink-purple text-center max-w-4xl mx-auto">
           <h3 className="text-2xl font-semibold mb-5 text-firelink-dark">Why These Solutions Fail</h3>
           <p className="text-gray-700 text-xl leading-relaxed">
             These approaches simply add complexity rather than reducing it. They create more 
