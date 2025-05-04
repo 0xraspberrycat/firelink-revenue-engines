@@ -44,18 +44,18 @@ const SolutionSection = () => {
   return (
     <section id="solution" className="py-16 bg-gray-50">
       <div className="section-container max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-3 gradient-text text-center">More Money, Less Work: <br />The Revenue Engine Solution</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text text-center">More Money, Less Work: <br />The Revenue Engine Solution</h2>
         
-        <div className="text-center text-gray-700 mb-8 max-w-3xl mx-auto">
-          <p className="text-xl mb-4">Imagine having a business that makes money while you sleep...</p>
-          <p className="mb-4">Imagine waking up to find new qualified appointments already booked on your calendar. Client documents perfectly organized without you lifting a finger. Proposals that generated and sent themselves at precisely the right moment. And payments that arrived automatically—no chasing, no hassle.</p>
-          <p className="mb-4">This isn't fantasy—it's what happens when you replace human dependencies with intelligent systems that work around the clock.</p>
-          <p className="text-xl font-medium">This is what we build for you: a complete Revenue Engine that runs without you.</p>
+        <div className="text-center text-gray-700 mb-10 max-w-3xl mx-auto">
+          <p className="text-xl mb-6">Imagine having a business that makes money while you sleep...</p>
+          <p className="mb-6">Imagine waking up to find new qualified appointments already booked on your calendar. Client documents perfectly organized without you lifting a finger. Proposals that generated and sent themselves at precisely the right moment. And payments that arrived automatically—no chasing, no hassle.</p>
+          <p className="mb-6">This isn't fantasy—it's what happens when you replace human dependencies with intelligent systems that work around the clock.</p>
+          <p className="text-xl font-medium mb-8">This is what we build for you: a complete Revenue Engine that runs without you.</p>
         </div>
 
-        <div className="bg-white p-8 rounded-lg shadow-sm mb-10">
+        <div className="bg-white p-8 rounded-lg shadow-md mb-12">
           <h3 className="text-2xl font-semibold mb-4">What most businesses do: Hire cheap labor that costs a fortune</h3>
-          <p className="text-gray-700 mb-6">
+          <p className="text-gray-700 mb-8">
             Most business owners try hiring multiple VAs and appointment setters at $4/hour each. But they quickly discover the hidden costs: training time, management headaches, quality control issues, and constant turnover. Even at $4/hour per person, a team of 20 ends up costing far more in real terms when you factor in your time and lost opportunities.
           </p>
           
@@ -67,23 +67,23 @@ const SolutionSection = () => {
         
         <h3 className="text-2xl font-semibold mb-6 text-center">Here's what your new Revenue Engine delivers:</h3>
         
-        <div className="bg-white p-8 rounded-lg max-w-5xl mx-auto shadow-sm border border-gray-100">
-          <div className="space-y-8">
+        <div className="bg-white p-8 rounded-lg shadow-md mb-12">
+          <div className="space-y-10">
             {solutions.map((solution, index) => (
-              <div key={index} className="animate-fade-in p-4 border-b border-gray-100 last:border-b-0" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="flex items-center mb-4">
-                  <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mr-3" />
-                  <h3 className="text-xl font-bold gradient-text">{solution.title}</h3>
-                </div>
-                <div className="pl-9">
-                  <p className="text-gray-700">{solution.description}</p>
+              <div key={index} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <div className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mr-4 mt-1" />
+                  <div>
+                    <h3 className="text-xl font-bold gradient-text mb-3">{solution.title}</h3>
+                    <p className="text-gray-700">{solution.description}</p>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        <div className="mt-12 bg-firelink-dark text-white p-8 rounded-lg text-center max-w-4xl mx-auto">
+        <div className="bg-firelink-dark text-white p-8 rounded-lg text-center">
           <h3 className="text-2xl font-semibold mb-4">Is Your Business Ready for True Freedom?</h3>
           <p className="text-lg mb-6">
             Most consultants and agency owners spend years trapped in operational chaos, watching their freedom and profits drain away day by day. The few who break free do it by building systems that work without them.

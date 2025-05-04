@@ -1,7 +1,16 @@
 
 import { Check, X } from 'lucide-react';
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from 'lucide-react';
 
 const AlternativeSolutionsSection = () => {
+  const scrollToBookCall = () => {
+    const element = document.getElementById('book-call');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
   return (
     <section className="bg-gray-50 py-16">
       <div className="section-container max-w-5xl mx-auto">
@@ -34,7 +43,7 @@ const AlternativeSolutionsSection = () => {
                 
                 <div className="bg-gray-100 p-6 rounded-lg my-6">
                   <img 
-                    src="/public/lovable-uploads/946d41d0-77d5-4803-abe2-75f17c41c8e6.png" 
+                    src="/public/lovable-uploads/7bb30cdc-6f82-4cd0-a9d7-49ebf085379b.png" 
                     alt="Fiverr Quote" 
                     className="w-full rounded-lg shadow-sm"
                   />
@@ -68,7 +77,7 @@ const AlternativeSolutionsSection = () => {
                 </p>
                 
                 <p className="text-gray-700 text-lg">
-                  When someone has nothing to lose, how much do you think they value your success? We tie our reputation to your results, which is why we guarantee specific outcomes.
+                  When someone has nothing to lose, how much do you think they value your success? We tie our reputation to your results.
                 </p>
               </div>
             </div>
@@ -121,6 +130,13 @@ const AlternativeSolutionsSection = () => {
                 <span className="text-gray-800 text-lg">Public Reputation - We can't hide behind anonymous profiles - our success is tied to yours</span>
               </li>
             </ul>
+          </div>
+
+          <div className="mt-10 text-center">
+            <Button onClick={scrollToBookCall} className="bg-firelink-dark text-white hover:bg-firelink-dark/90 text-base group">
+              BOOK YOUR STRATEGY CALL
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
           </div>
         </div>
       </div>
