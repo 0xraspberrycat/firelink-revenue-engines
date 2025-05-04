@@ -50,7 +50,7 @@ const SolutionSection = () => {
           <p className="text-xl mb-4">Imagine having a business that makes money while you sleep...</p>
           <p className="mb-4">Imagine waking up to find new qualified appointments already booked on your calendar. Client documents perfectly organized without you lifting a finger. Proposals that generated and sent themselves at precisely the right moment. And payments that arrived automatically—no chasing, no hassle.</p>
           <p className="mb-4">This isn't fantasy—it's what happens when you replace human dependencies with intelligent systems that work around the clock.</p>
-          <p className="text-xl font-medium">This is what we build for you: a complete Revenue Engine that runs without you.</p>
+          <p className="text-xl font-medium mb-10">This is what we build for you: a complete Revenue Engine that runs without you.</p>
         </div>
 
         <div className="bg-white p-8 rounded-lg shadow-sm mb-10">
