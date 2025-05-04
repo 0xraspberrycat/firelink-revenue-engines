@@ -38,19 +38,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -124,4 +117,21 @@
   .section-subtitle {
     @apply text-base md:text-lg text-gray-700 mb-8;
   }
+}
+
+/* Fix for mobile overflow issues */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+/* Hide the scrollbar for cal-inline-container */
+.cal-inline-container::-webkit-scrollbar {
+  display: none;
+}
+
+.cal-inline-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

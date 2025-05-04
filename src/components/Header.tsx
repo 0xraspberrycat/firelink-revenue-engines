@@ -56,61 +56,41 @@ const Header = () => {
         </div>
       </div>
       
-      <div 
-        className={cn(
-          "md:hidden fixed inset-0 bg-white z-50 transition-transform duration-300 ease-in-out transform",
-          isOpen ? "translate-x-0" : "translate-x-full"
-        )}
-      >
-        <div className="flex justify-end p-4">
-          <button onClick={toggleMenu} className="text-firelink-dark p-2">
-            <X size={24} />
-          </button>
-        </div>
-        
-        <div className="p-4">
-          <nav>
-            <ul className="space-y-4">
-              <li>
-                <Link 
-                  to="/" 
-                  className="block text-firelink-dark hover:text-firelink-purple transition-colors text-lg"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/video" 
-                  className="block text-firelink-dark hover:text-firelink-purple transition-colors text-lg"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Video
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  to="/thank-you" 
-                  className="block text-firelink-dark hover:text-firelink-purple transition-colors text-lg"
-                  onClick={() => setIsOpen(false)}
-                >
-                  Thank You
-                </Link>
-              </li>
-            </ul>
-          </nav>
+      {/* Mobile menu - fixed position rather than transform for better accessibility */}
+      {isOpen && (
+        <div className="md:hidden fixed inset-0 bg-white z-50">
+          <div className="flex justify-end p-4">
+            <button onClick={toggleMenu} className="text-firelink-dark p-2">
+              <X size={24} />
+            </button>
+          </div>
           
-          <div className="mt-8">
-            <Button 
-              className="bg-firelink-dark hover:bg-firelink-purple text-white w-full"
-              onClick={scrollToBookCall}
-            >
-              Book a Call
-            </Button>
+          <div className="p-4">
+            <nav>
+              <ul className="space-y-4">
+                <li>
+                  <Link 
+                    to="/" 
+                    className="block text-firelink-dark hover:text-firelink-purple transition-colors text-lg"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Home
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+            
+            <div className="mt-8">
+              <Button 
+                className="bg-firelink-dark hover:bg-firelink-purple text-white w-full"
+                onClick={scrollToBookCall}
+              >
+                Book a Call
+              </Button>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </header>
   );
 };
