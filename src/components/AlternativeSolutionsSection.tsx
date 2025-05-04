@@ -41,7 +41,7 @@ const AlternativeSolutionsSection = () => {
                 </div>
                 
                 <p className="text-gray-700 text-lg">
-                  That's 20 days and $2,000 for something our team implements in 24 hours. How much revenue are you losing during those extra 19 days of waiting? And what happens after those 6 months of "full access" expire?
+                  That's 20 business days (4 weeks!) and $2,000 for something our team implements in 24-48 hours. How much revenue are you losing during that **month of waiting**? How much upside are you missing out on? And what happens after those 6 months of "full access" expire?
                 </p>
                 
                 <p className="text-gray-700 text-lg font-medium">
@@ -60,7 +60,7 @@ const AlternativeSolutionsSection = () => {
               
               <div className="ml-10 space-y-4">
                 <p className="text-gray-700 text-lg">
-                  Most developers have one goal: lock you into paying them forever through monthly subscriptions or "access fees" to your own systems.
+                  Most developers have one goal: lock you into paying them forever through monthly subscriptions or "access fees" to a system you should own.
                 </p>
                 
                 <p className="text-gray-700 text-lg">
