@@ -54,18 +54,18 @@ const SolutionSection = () => {
         </div>
 
         <div className="bg-white p-8 rounded-lg shadow-sm mb-10">
-          <h3 className="text-2xl font-semibold mb-4">What most businesses do: Hire cheap labor that costs a fortune</h3>
+          <h3 className="text-2xl font-semibold mb-4">What Most Businesses Do: Hire Cheap Labor That Costs a Fortune</h3>
           <p className="text-gray-700 mb-6">
             Most business owners try hiring multiple VAs and appointment setters at $4/hour each. But they quickly discover the hidden costs: training time, management headaches, quality control issues, and constant turnover. Even at $4/hour per person, a team of 20 ends up costing far more in real terms when you factor in your time and lost opportunities.
           </p>
           
-          <h3 className="text-2xl font-semibold mb-4">What we deliver: The equivalent of an entire team for one fixed price</h3>
+          <h3 className="text-2xl font-semibold mb-4">What We Deliver: The Equivalent of an Entire Team for One Fixed Price</h3>
           <p className="text-gray-700 mb-6">
             With Firelink, you get the output equivalent of dozens of appointment setters and VAs working 24/7 for a TOTAL of $3-7/hour. Our systems never sleep, never quit, never have "personal emergencies," and work at peak performance every single day.
           </p>
         </div>
         
-        <h3 className="text-2xl font-semibold mb-6 text-center">Here's what your new Revenue Engine delivers:</h3>
+        <h3 className="text-2xl font-semibold mb-6 text-center">Here's What Your New Revenue Engine Delivers:</h3>
         
         <div className="bg-white p-8 rounded-lg max-w-5xl mx-auto shadow-sm border border-gray-100">
           <div className="space-y-8">
