@@ -20,7 +20,7 @@ const CTASection = ({ id = "cta" }: { id?: string }) => {
           <p className="text-xl mb-10 text-white/80 max-w-2xl mx-auto">
             Book a 45-minute strategy call to see exactly how our AI-powered systems could transform your operational chaos into predictable revenue.
           </p>
-          <Button onClick={scrollToBookCall} className="bg-white text-gray-900 hover:bg-white/90 text-base font-bold group min-w-[250px] py-6 text-lg">
+          <Button onClick={scrollToBookCall} className="bg-white text-black hover:bg-white/90 text-base font-bold group min-w-[250px] py-6 text-lg">
             Book Your Strategy Call
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>

@@ -1,10 +1,26 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const scrollToBookCall = () => {
     const element = document.getElementById('book-a-call');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const navItems = [
+    { name: "Home", sectionId: "hero" },
+    { name: "Problem", sectionId: "problem" },
+    { name: "Solution", sectionId: "solution" },
+    { name: "Case Studies", sectionId: "case-studies" },
+    { name: "Contact", sectionId: "book-a-call" }
+  ];
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -25,7 +41,7 @@ const Footer = () => {
           <div className="flex flex-col space-y-4 md:flex-row md:space-y-0 md:space-x-4">
             <Button
               variant="outline"
-              className="border-white text-white hover:bg-white hover:text-black"
+              className="border-white text-black bg-white hover:bg-gray-200 hover:text-black"
               onClick={scrollToBookCall}
             >
               Book a Call
@@ -35,43 +51,46 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-800 pt-8 mt-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Services</h4>
+              <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Navigation</h4>
               <ul className="space-y-2">
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Lead Gen Automation</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Campaign Monitoring</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Response Filtering</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Client Reporting</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Resources</h4>
-              <ul className="space-y-2">
-                <li><a href="#case-studies" className="text-gray-300 hover:text-white transition-colors">Case Studies</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Blog</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Knowledge Base</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">FAQ</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Company</h4>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">About</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Team</a></li>
-                <li><a href="#" className="text-gray-300 hover:text-white transition-colors">Careers</a></li>
-                <li><a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a></li>
+                {navItems.map((item, index) => (
+                  <li key={index}>
+                    <button 
+                      onClick={() => scrollToSection(item.sectionId)}
+                      className="text-gray-300 hover:text-white transition-colors"
+                    >
+                      {item.name}
+                    </button>
+                  </li>
+                ))}
               </ul>
             </div>
             
             <div>
               <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Connect</h4>
               <ul className="space-y-2">
-                <li><a href="https://x.com/ErmiasAuto" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">X (Ermias)</a></li>
-                <li><a href="https://x.com/paulautomates" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">X (Paul)</a></li>
-                <li><a href="mailto:ermiasauto@gmail.com" className="text-gray-300 hover:text-white transition-colors">Email</a></li>
+                <li>
+                  <a href="mailto:ermiasauto@gmail.com" className="text-gray-300 hover:text-white transition-colors">
+                    Email (Ermias)
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:paulxautomation@gmail.com" className="text-gray-300 hover:text-white transition-colors">
+                    Email (Paul)
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/ErmiasAuto" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                    X (Ermias)
+                  </a>
+                </li>
+                <li>
+                  <a href="https://x.com/paulautomates" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
+                    X (Paul)
+                  </a>
+                </li>
               </ul>
             </div>
           </div>

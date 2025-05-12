@@ -72,7 +72,7 @@ const FalseSolutionSection = () => {
             </ul>
             
             <div className="flex justify-center mt-6">
-              <Button onClick={scrollToBookCall} className="bg-gray-900 text-white hover:bg-gray-800 text-base group">
+              <Button onClick={scrollToBookCall} className="bg-black text-white hover:bg-gray-800 text-base group">
                 Book Your Strategy Call
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>

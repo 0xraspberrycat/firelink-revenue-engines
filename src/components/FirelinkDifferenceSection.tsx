@@ -45,7 +45,7 @@ const FirelinkDifferenceSection = () => {
   return (
     <section className="py-16 bg-white">
       <div className="section-container max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 gradient-text text-center">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-black text-center">
           The Firelink Difference
         </h2>
         
@@ -85,12 +85,12 @@ const FirelinkDifferenceSection = () => {
         </div>
         
         <div className="bg-gray-50 p-8 rounded-lg border border-gray-200 max-w-3xl mx-auto">
-          <h3 className="text-2xl font-semibold mb-6 text-center text-firelink-dark">Key Benefits:</h3>
+          <h3 className="text-2xl font-semibold mb-6 text-center text-black">Key Benefits:</h3>
           <ul className="space-y-3">
             {keyBenefits.map((benefit, index) => (
               <li key={index} className="flex items-center">
-                <span className="bg-firelink-purple/10 p-1 rounded-full mr-3 flex-shrink-0">
-                  <Check className="h-4 w-4 text-firelink-purple" />
+                <span className="p-1 rounded-full mr-3 flex-shrink-0">
+                  <Check className="h-4 w-4 text-black" />
                 </span>
                 <span className="text-gray-700 text-lg">{benefit}</span>
               </li>
@@ -98,7 +98,7 @@ const FirelinkDifferenceSection = () => {
           </ul>
           
           <div className="mt-8 text-center">
-            <Button onClick={scrollToBookCall} className="cta-button text-base group">
+            <Button onClick={scrollToBookCall} className="bg-black text-white hover:bg-gray-800 text-base group">
               Book Your Strategy Call
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>

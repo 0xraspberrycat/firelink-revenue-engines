@@ -44,14 +44,6 @@
 }
 
 /* Premium Enterprise Styles */
-.gradient-text {
-  background: linear-gradient(90deg, #1a1a1a 0%, #333333 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  display: inline-block;
-}
-
 .premium-btn {
   px-6 py-3 md:px-8 md:py-4 bg-gray-900 hover:bg-gray-800 text-white rounded-md font-bold text-sm md:text-base transition-all duration-200;
 }
