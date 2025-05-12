@@ -13,11 +13,11 @@ const AlternativeSolutionsSection = () => {
   return (
     <section className="bg-gray-50 py-16">
       <div className="section-container max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-gray-900 heading-grain">
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-gray-900">
           The Reality of "Cheap" Alternatives
         </h2>
         
-        <div className="card-grain bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
+        <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100">
           <div className="text-center px-8 py-6 border-b border-gray-100">
             <h3 className="text-2xl font-bold text-gray-800">
               The Fiverr/Upwork "Expert" Scam
@@ -31,7 +31,7 @@ const AlternativeSolutionsSection = () => {
             <img 
               src="/lovable-uploads/e382e743-77c8-414f-a21a-163ef0498d18.png" 
               alt="Twitter post showing Fiverr/Upwork expert scam" 
-              className="w-full object-cover h-[400px]"
+              className="w-full object-contain h-[400px]"
             />
           </div>
           

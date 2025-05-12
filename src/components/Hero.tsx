@@ -14,14 +14,13 @@ const Hero = () => {
     <section id="hero" className="relative pt-12 md:pt-16 pb-12 md:pb-16 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white pointer-events-none"></div>
-      <div className="absolute inset-0 opacity-[0.015] bg-[radial-gradient(#333333_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
       
       <div className="relative section-container">
         <div className="max-w-5xl mx-auto">
           <div className="text-left md:text-center mb-10 md:mb-14">
-            <h1 className="premium-heading mb-6 text-gray-900 heading-grain">
+            <h1 className="premium-heading mb-6 text-gray-900">
               <span className="gradient-text">Automate Your Lead Gen Agency</span> <br className="hidden sm:block" />
-              <span className="text-gray-800 border-b-2 border-gray-300">Scale Without Chaos</span>
+              <span className="text-gray-600 border-b-2 border-gray-300">Scale Without Chaos</span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">

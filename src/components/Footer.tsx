@@ -6,12 +6,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-black text-white">
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           <div className="space-y-6">
             <Link to="/" className="inline-block">
-              <span className="text-2xl font-bold">Fire<span className="text-gray-400">link</span></span>
+              <span className="text-2xl font-bold">Fire<span className="text-white">Link</span></span>
             </Link>
             <p className="text-white/60 max-w-xs">
               Intelligent automation systems for lead generation agencies, transforming manual operations into streamlined systems.
@@ -78,8 +78,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-8 text-white/40 text-sm flex flex-col md:flex-row justify-between items-center">
-          <p>&copy; {currentYear} Firelink. All rights reserved.</p>
-          <p className="mt-4 md:mt-0">Designed for lead generation agencies</p>
+          <p>&copy; {currentYear} FireLink. All rights reserved.</p>
         </div>
       </div>
     </footer>

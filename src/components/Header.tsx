@@ -53,7 +53,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <span className="font-bold text-xl text-gray-900">Firelink</span>
+              <span className="font-bold text-xl text-gray-900">Fire<span>Link</span></span>
             </Link>
           </div>
           
@@ -75,7 +75,7 @@ const Header = () => {
             
             <Button 
               onClick={() => scrollToSection('book-a-call')} 
-              className="bg-gray-900 hover:bg-gray-800 text-white font-bold"
+              className="bg-black hover:bg-gray-800 text-white font-bold"
             >
               Book a Call
             </Button>
@@ -119,7 +119,7 @@ const Header = () => {
             
             <div className="mt-10">
               <Button 
-                className="bg-gray-900 hover:bg-gray-800 text-white w-full font-bold"
+                className="bg-black hover:bg-gray-800 text-white w-full font-bold"
                 onClick={() => {
                   scrollToSection('book-a-call');
                   setIsOpen(false);
