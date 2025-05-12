@@ -25,7 +25,7 @@ const CaseStudiesSection = () => {
     {
       client: "The Deal Lab",
       industry: "Real Estate Lead Gen",
-      highlight: "43% revenue increase ($280K to $400K monthly)",
+      highlight: "43% revenue increase",
       results: [
         "Founder reclaimed 15+ hours weekly",
         "Automated campaign performance tracking",
