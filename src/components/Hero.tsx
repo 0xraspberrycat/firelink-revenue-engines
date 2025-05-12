@@ -19,7 +19,7 @@ const Hero = () => {
         <div className="max-w-7xl mx-auto">
           <div className="text-left md:text-center mb-10 md:mb-14">
             <h1 className="premium-heading mb-6 text-black">
-              Automate Your Lead Gen Agency <br className="hidden sm:block" />
+              Automate Your Lead Gen Agency, <br className="hidden sm:block" />
               <span className="text-black">Scale Without Chaos</span>
             </h1>
             
