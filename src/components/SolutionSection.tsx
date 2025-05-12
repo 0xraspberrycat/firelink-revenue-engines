@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, X } from 'lucide-react'; // Added X import here
 
 const SolutionSection = () => {
   const features = [
