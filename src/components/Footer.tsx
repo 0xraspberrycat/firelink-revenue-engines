@@ -99,7 +99,7 @@ const Footer = () => {
             <p className="text-sm text-gray-400">© {currentYear} FireLink. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</Link>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+              <Link to="/terms" className="text-gray-400 hover:text-white transition-colors">Terms of Service</Link>
             </div>
           </div>
         </div>
