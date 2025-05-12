@@ -23,6 +23,18 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Prevent body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isOpen]);
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -95,17 +107,23 @@ const Header = () => {
         </div>
       </div>
       
-      {/* Mobile menu */}
+      {/* Mobile menu - Fixed fullscreen with improved styling */}
       {isOpen && (
-        <div className="md:hidden fixed inset-0 bg-white z-50">
-          <div className="flex justify-end p-4">
+        <div className="md:hidden fixed inset-0 bg-white z-50 flex flex-col">
+          <div className="flex justify-between items-center px-6 h-16 border-b border-gray-100">
+            <Link to="/" className="flex items-center" onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              setIsOpen(false);
+            }}>
+              <span className="font-bold text-xl text-gray-900">FireLink</span>
+            </Link>
             <button onClick={toggleMenu} className="text-gray-900 p-2">
               <X size={24} />
             </button>
           </div>
           
-          <div className="p-8">
-            <nav>
+          <div className="flex-1 flex flex-col overflow-auto">
+            <nav className="py-8 px-6">
               <ul className="space-y-6">
                 {navItems.map((item) => (
                   <li key={item.name}>
@@ -123,9 +141,10 @@ const Header = () => {
               </ul>
             </nav>
             
-            <div className="mt-10">
+            <div className="mt-auto px-6 py-8 border-t border-gray-100">
               <Button 
-                className="bg-black hover:bg-gray-800 text-white w-full font-bold"
+                className="bg-black hover:bg-gray-800 text-white w-full font-bold py-6"
+                size="lg"
                 onClick={() => {
                   scrollToSection('book-a-call');
                   setIsOpen(false);
