@@ -65,15 +65,15 @@ const CaseStudiesSection = () => {
   };
 
   return (
-    <section id="case-studies" className="py-16 bg-white border-t border-gray-100">
+    <section id="case-studies" className="py-16 bg-white border-t border-gray-100 grain-overlay">
       <div className="section-container max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-900">Client Success Stories</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-gray-900 heading-grain">Client Success Stories</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
           {caseStudies.map((study, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl border border-gray-200 overflow-hidden transition-all hover:shadow-md"
+              className="card-grain bg-white rounded-xl border border-gray-200 overflow-hidden transition-all hover:shadow-md"
             >
               <div className="bg-gray-50 px-6 py-4 border-b border-gray-100">
                 <span className="text-xs text-gray-500 uppercase tracking-wider">{study.industry}</span>
@@ -99,7 +99,7 @@ const CaseStudiesSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-10 bg-gray-50 p-8 rounded-xl border border-gray-100">
+        <div className="text-center mt-10 bg-gray-50 p-8 rounded-xl border border-gray-100 card-grain">
           <h3 className="text-2xl font-bold mb-4 text-gray-900">Ready for similar results?</h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Book a strategy call to see exactly how our automated systems could transform your lead generation operations.

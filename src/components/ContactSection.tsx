@@ -22,38 +22,38 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 bg-gray-50">
+    <section id="contact" className="pb-16 bg-gray-50">
       <div className="section-container max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center gradient-text">
-          Contact Firelink
-        </h2>
+        <h3 className="text-xl font-semibold mb-8 text-center text-gray-700">
+          Other Ways to Connect
+        </h3>
         
-        <div className="grid md:grid-cols-2 gap-10">
-          <div className="bg-white p-8 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-6 text-firelink-dark">Email Us:</h3>
-            <ul className="space-y-4">
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="card-grain bg-white p-6 rounded-lg shadow-sm">
+            <h3 className="text-lg font-semibold mb-5 text-gray-800">Email Us:</h3>
+            <ul className="space-y-3">
               {emails.map((email, index) => (
                 <li key={index}>
                   <a 
                     href={`mailto:${email}`}
-                    className="flex items-center text-firelink-dark hover:text-firelink-purple transition-colors"
+                    className="flex items-center text-gray-700 hover:text-gray-900 transition-colors"
                   >
                     <Mail className="h-5 w-5 mr-3" />
-                    <span className="text-lg">{email}</span>
+                    <span>{email}</span>
                   </a>
                 </li>
               ))}
             </ul>
           </div>
           
-          <div className="bg-white p-8 rounded-lg shadow-sm">
-            <h3 className="text-xl font-semibold mb-6 text-firelink-dark">Find Us on X:</h3>
-            <ul className="space-y-4">
+          <div className="card-grain bg-white p-6 rounded-lg shadow-sm">
+            <h3 className="text-lg font-semibold mb-5 text-gray-800">Find Us on X:</h3>
+            <ul className="space-y-3">
               {socialProfiles.map((profile, index) => (
                 <li key={index}>
                   <Button 
                     variant="outline" 
-                    className="w-full justify-start text-firelink-dark hover:text-firelink-purple"
+                    className="w-full justify-start text-gray-700 hover:text-gray-900"
                     asChild
                   >
                     <a href={profile.url} target="_blank" rel="noopener noreferrer">

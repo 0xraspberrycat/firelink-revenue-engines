@@ -11,10 +11,10 @@ const CTASection = ({ id = "cta" }: { id?: string }) => {
   };
 
   return (
-    <section id={id} className="py-20 md:py-24 bg-gradient-to-r from-gray-900 to-black text-white">
+    <section id={id} className="py-20 md:py-24 bg-gradient-to-r from-gray-900 to-black text-white grain-overlay">
       <div className="section-container max-w-5xl mx-auto">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 tracking-tight leading-tight heading-grain">
             Interested in More Money for Less Work?
           </h2>
           <p className="text-xl mb-10 text-white/80 max-w-2xl mx-auto">

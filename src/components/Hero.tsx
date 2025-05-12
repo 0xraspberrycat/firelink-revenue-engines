@@ -11,7 +11,7 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative pt-20 md:pt-28 pb-16 md:pb-24 overflow-hidden">
+    <section id="hero" className="relative pt-16 md:pt-20 pb-12 md:pb-16 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white pointer-events-none"></div>
       <div className="absolute inset-0 opacity-[0.015] bg-[radial-gradient(#333333_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
@@ -19,12 +19,12 @@ const Hero = () => {
       <div className="relative section-container">
         <div className="max-w-5xl mx-auto">
           <div className="text-left md:text-center mb-10 md:mb-14">
-            <h1 className="premium-heading mb-6 text-gray-900">
+            <h1 className="premium-heading mb-6 text-gray-900 heading-grain">
               <span className="gradient-text">Automate Your Lead Gen</span> <br className="hidden sm:block" />
               Scale Without Chaos
             </h1>
             
-            <p className="text-lg md:text-xl lg:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
               Intelligent automation systems for lead generation agencies, transforming manual campaign monitoring into streamlined operations that run 24/7 without human dependency.
             </p>
             
@@ -33,14 +33,17 @@ const Hero = () => {
                 Book Strategy Call
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </Button>
-              <Button variant="outline" size="lg" className="premium-btn-outline w-full sm:w-auto">
+              <Button variant="outline" size="lg" className="premium-btn-outline w-full sm:w-auto" onClick={() => {
+                const element = document.getElementById('case-studies');
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+              }}>
                 View Case Studies
               </Button>
             </div>
           </div>
           
           {/* Brands trust section */}
-          <div className="mt-16 pt-10 border-t border-gray-100">
+          <div className="mt-12 pt-8 border-t border-gray-100">
             <p className="text-sm text-center text-gray-400 uppercase tracking-wider mb-6 font-medium">
               Trusted by lead generation agencies across industries
             </p>
