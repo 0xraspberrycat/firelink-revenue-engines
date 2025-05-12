@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
@@ -9,6 +9,15 @@ const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const isMobile = useIsMobile();
+  const location = useLocation();
+  
+  // Check if the current page should hide the header
+  const hideHeader = ['/thank-you', '/video'].includes(location.pathname);
+
+  // If on a page where header should be hidden, don't render anything
+  if (hideHeader) {
+    return null;
+  }
 
   useEffect(() => {
     const handleScroll = () => {
