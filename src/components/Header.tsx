@@ -14,13 +14,22 @@ const Header = () => {
     setIsOpen(!isOpen);
   };
 
-  const scrollToBookCall = () => {
-    const element = document.getElementById('book-call');
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       if (isOpen) setIsOpen(false);
     }
   };
+
+  const navItems = [
+    { name: "Home", sectionId: "hero" },
+    { name: "Problem", sectionId: "problem" },
+    { name: "Solution", sectionId: "solution" },
+    { name: "Lead Gen Offer", sectionId: "lead-gen-offer" },
+    { name: "Case Studies", sectionId: "case-studies" },
+    { name: "Contact", sectionId: "contact" }
+  ];
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-white z-50 shadow-sm">
@@ -35,15 +44,23 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-8">
             <nav>
               <ul className="flex space-x-8">
-                <li>
-                  <Link to="/" className="text-firelink-dark hover:text-firelink-purple transition-colors">
-                    Home
-                  </Link>
-                </li>
+                {navItems.map((item) => (
+                  <li key={item.name}>
+                    <button 
+                      onClick={() => scrollToSection(item.sectionId)}
+                      className="text-firelink-dark hover:text-firelink-purple transition-colors"
+                    >
+                      {item.name}
+                    </button>
+                  </li>
+                ))}
               </ul>
             </nav>
             
-            <Button onClick={scrollToBookCall} className="bg-firelink-dark hover:bg-firelink-purple text-white">
+            <Button 
+              onClick={() => scrollToSection('book-a-call')} 
+              className="bg-firelink-dark hover:bg-firelink-purple text-white"
+            >
               Book a Call
             </Button>
           </div>
@@ -68,22 +85,29 @@ const Header = () => {
           <div className="p-4">
             <nav>
               <ul className="space-y-4">
-                <li>
-                  <Link 
-                    to="/" 
-                    className="block text-firelink-dark hover:text-firelink-purple transition-colors text-lg"
-                    onClick={() => setIsOpen(false)}
-                  >
-                    Home
-                  </Link>
-                </li>
+                {navItems.map((item) => (
+                  <li key={item.name}>
+                    <button
+                      onClick={() => {
+                        scrollToSection(item.sectionId);
+                        setIsOpen(false);
+                      }}
+                      className="block text-firelink-dark hover:text-firelink-purple transition-colors text-lg w-full text-left"
+                    >
+                      {item.name}
+                    </button>
+                  </li>
+                ))}
               </ul>
             </nav>
             
             <div className="mt-8">
               <Button 
                 className="bg-firelink-dark hover:bg-firelink-purple text-white w-full"
-                onClick={scrollToBookCall}
+                onClick={() => {
+                  scrollToSection('book-a-call');
+                  setIsOpen(false);
+                }}
               >
                 Book a Call
               </Button>

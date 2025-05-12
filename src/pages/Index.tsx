@@ -2,11 +2,12 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ProblemSection from "@/components/ProblemSection";
-import AgitationSection from "@/components/AgitationSection";
 import FalseSolutionSection from "@/components/FalseSolutionSection";
 import SolutionSection from "@/components/SolutionSection";
+import LeadGenOfferSection from "@/components/LeadGenOfferSection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
-import AlternativeSolutionsSection from "@/components/AlternativeSolutionsSection";
+import FirelinkDifferenceSection from "@/components/FirelinkDifferenceSection";
+import ContactSection from "@/components/ContactSection";
 import BookCallSection from "@/components/BookCallSection";
 import Footer from "@/components/Footer";
 
@@ -17,11 +18,12 @@ const Index = () => {
       <main className="pt-16">
         <Hero />
         <ProblemSection />
-        <AgitationSection />
         <FalseSolutionSection />
         <SolutionSection />
+        <LeadGenOfferSection />
         <CaseStudiesSection />
-        <AlternativeSolutionsSection />
+        <FirelinkDifferenceSection />
+        <ContactSection />
         <BookCallSection />
       </main>
       <Footer />

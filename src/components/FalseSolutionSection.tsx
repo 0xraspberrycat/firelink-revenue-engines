@@ -5,21 +5,21 @@ import { Button } from "@/components/ui/button";
 const FalseSolutionSection = () => {
   const falseSolutions = [
     {
-      approach: "Adding more team members",
-      problem: "Increases management complexity and costs without solving the core issues"
+      approach: "Hiring more team members",
+      problem: "Increases management overhead and costs without fixing the system"
     },
     {
-      approach: "Using multiple disconnected tools",
-      problem: "Creates data silos and requires constant human intervention to sync information"
+      approach: "Using disconnected tools",
+      problem: "Creates data silos and requires constant human intervention"
     },
     {
-      approach: "Manual process documentation",
-      problem: "Quickly becomes outdated and relies on perfect execution by team members"
+      approach: "Manual campaign tracking",
+      problem: "Delays issue detection and wastes campaign budget"
     }
   ];
 
   const scrollToBookCall = () => {
-    const element = document.getElementById('book-call');
+    const element = document.getElementById('book-a-call');
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
@@ -29,10 +29,10 @@ const FalseSolutionSection = () => {
     <section className="bg-white py-14">
       <div className="section-container max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-3 text-center text-firelink-dark">
-          The Traditional Approach Doesn't Work
+          Why Traditional Approaches Fail
         </h2>
         <p className="text-center text-gray-600 mb-10 max-w-3xl mx-auto text-xl">
-          Most businesses try to solve operational chaos with solutions that create more problems
+          Common solutions add complexity instead of solving core issues
         </p>
         
         <div className="flex flex-col gap-8 mb-12">
