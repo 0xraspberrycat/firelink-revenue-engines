@@ -43,6 +43,11 @@ const SolutionSection = () => {
       title: "Time Reclaimed",
       description: "Eliminate manual monitoring and get back 15+ hours every week",
       icon: "⏰"
+    },
+    {
+      title: "Automated Onboarding",
+      description: "Streamlined client setup with templated workflows and documentation",
+      icon: "🚀"
     }
   ];
 
@@ -67,15 +72,15 @@ const SolutionSection = () => {
           {systems.map((item, index) => (
             <div 
               key={index} 
-              className="bg-gray-900 p-7 rounded-lg border border-gray-800 h-full"
+              className="bg-white p-7 rounded-lg h-full text-black hover:shadow-md transition-all"
             >
               <div className="flex items-start gap-4">
-                <div className="bg-gray-800 p-2 rounded-md flex-shrink-0">
+                <div className="bg-black p-2 rounded-md flex-shrink-0">
                   <span className="text-2xl" aria-hidden="true">{item.icon}</span>
                 </div>
                 <div>
-                  <h4 className="font-bold text-xl mb-3 text-white">{item.title}</h4>
-                  <p className="text-gray-300">{item.description}</p>
+                  <h4 className="font-bold text-xl mb-3">{item.title}</h4>
+                  <p className="text-gray-700">{item.description}</p>
                 </div>
               </div>
             </div>
@@ -83,7 +88,7 @@ const SolutionSection = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <Button onClick={scrollToBookCall} className="bg-white hover:bg-gray-200 text-gray-900 px-8 py-6 text-lg font-bold rounded-md group">
+          <Button onClick={scrollToBookCall} className="bg-white hover:bg-gray-200 text-black px-8 py-6 text-lg font-bold rounded-md group">
             Get Your Custom Automation System
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>

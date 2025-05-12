@@ -16,11 +16,11 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white pointer-events-none"></div>
       
       <div className="relative section-container">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="text-left md:text-center mb-10 md:mb-14">
-            <h1 className="premium-heading mb-6 text-gray-900">
-              <span className="gradient-text">Automate Your Lead Gen Agency</span> <br className="hidden sm:block" />
-              <span className="text-gray-600 border-b-2 border-gray-300">Scale Without Chaos</span>
+            <h1 className="premium-heading mb-6 text-black">
+              Automate Your Lead Gen Agency <br className="hidden sm:block" />
+              <span className="text-black">Scale Without Chaos</span>
             </h1>
             
             <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto">

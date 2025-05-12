@@ -57,25 +57,19 @@ const FalseSolutionSection = () => {
           <div className="p-7 rounded-lg border border-gray-200 bg-white mt-8">
             <h3 className="text-2xl font-semibold mb-5 text-gray-900">The Real Solution</h3>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-4">
-                <p className="text-gray-700 leading-relaxed text-left">
-                  The real solution isn't adding more human effort. It's building intelligent systems 
-                  that eliminate the need for constant human intervention.
-                </p>
-              </div>
-              
-              <div>
-                <ul className="space-y-3">
-                  {realSolutions.map((item, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <Check className="h-5 w-5 text-gray-800 mr-3 flex-shrink-0 mt-1" />
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
+            <p className="text-gray-700 leading-relaxed text-left mb-6">
+              The real solution isn't adding more human effort. It's building intelligent systems 
+              that eliminate the need for constant human intervention.
+            </p>
+            
+            <ul className="space-y-3">
+              {realSolutions.map((item, idx) => (
+                <li key={idx} className="flex items-start">
+                  <Check className="h-5 w-5 text-gray-800 mr-3 flex-shrink-0 mt-1" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
             
             <div className="flex justify-center mt-6">
               <Button onClick={scrollToBookCall} className="bg-gray-900 text-white hover:bg-gray-800 text-base group">

@@ -8,6 +8,7 @@ import CaseStudiesSection from "@/components/CaseStudiesSection";
 import AlternativeSolutionsSection from "@/components/AlternativeSolutionsSection";
 import BookCallSection from "@/components/BookCallSection";
 import CTASection from "@/components/CTASection";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -24,6 +25,7 @@ const Index = () => {
         <CTASection />
         <div className="bg-gray-50 border-t border-gray-100">
           <BookCallSection />
+          <ContactSection />
         </div>
       </main>
       <Footer />

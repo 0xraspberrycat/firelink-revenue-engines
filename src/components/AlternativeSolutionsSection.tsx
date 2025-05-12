@@ -31,7 +31,8 @@ const AlternativeSolutionsSection = () => {
             <img 
               src="/lovable-uploads/e382e743-77c8-414f-a21a-163ef0498d18.png" 
               alt="Twitter post showing Fiverr/Upwork expert scam" 
-              className="w-full h-auto max-h-[400px] object-contain mx-auto"
+              className="w-full h-auto object-cover mx-auto max-h-[500px]"
+              style={{ objectFit: 'contain' }}
             />
           </div>
           

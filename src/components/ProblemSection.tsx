@@ -1,24 +1,31 @@
 
 import { X } from 'lucide-react';
-import { Card } from "@/components/ui/card";
 
 const ProblemSection = () => {
-  const columns = [
+  const problems = [
     {
-      title: "Wasting Money",
-      issues: [
-        "Lost revenue from campaigns that should have been paused",
-        "Team time spent on manual reporting",
-        "Client churn due to inconsistent communication",
-      ]
+      title: "Manual Campaign Monitoring",
+      description: "Hours spent daily checking on campaign performance that should have been automated."
     },
     {
-      title: "Wasting Time",
-      issues: [
-        "Manual campaign monitoring consuming hours of your day",
-        "Inability to scale beyond your personal bandwidth",
-        "Limited focus on strategy and business development"
-      ]
+      title: "Inconsistent Client Reporting",
+      description: "Late or missed client updates leading to retention issues and churn."
+    },
+    {
+      title: "Response Filtering Overload",
+      description: "Missing valuable leads buried in an avalanche of notifications."
+    },
+    {
+      title: "Limited Team Bandwidth",
+      description: "Unable to scale operations because your team is tied up with repetitive tasks."
+    },
+    {
+      title: "No Anomaly Detection",
+      description: "Missing opportunities to fix underperforming campaigns before they waste budget."
+    },
+    {
+      title: "Scattered Key Metrics",
+      description: "Valuable data spread across multiple platforms without a unified view."
     }
   ];
 
@@ -35,39 +42,19 @@ const ProblemSection = () => {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {columns.map((column, columnIndex) => (
-            <div key={columnIndex} className="p-6 bg-gray-900 rounded-lg border border-gray-800">
-              <h3 className="text-xl font-semibold mb-6 text-gray-200">{column.title}</h3>
-              <div className="space-y-4">
-                {column.issues.map((issue, index) => (
-                  <div key={index} className="flex items-start space-x-3">
-                    <X className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
-                    <p className="text-sm md:text-base text-white/90">{issue}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
-          {[
-            "Missed responses from potential leads due to lack of filtering",
-            "Poor client reporting leading to retention issues",
-            "Inability to detect and stop failing campaigns automatically",
-            "Scattered KPI tracking across multiple platforms",
-            "Team overwhelmed by repetitive, low-value tasks",
-            "Valuable team time spent on manual reporting"
-          ].map((issue, index) => (
+        <div className="flex flex-wrap justify-center gap-6">
+          {problems.map((problem, index) => (
             <div 
               key={index} 
-              className="flex flex-col p-5 bg-gray-900 rounded-lg border border-gray-800"
+              className="flex flex-col w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33%-1.5rem)] p-8 bg-gray-900 border border-gray-800 hover:border-gray-700 transition-all rounded-lg"
             >
-              <div className="flex items-start space-x-3 mb-2">
-                <X className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
-                <p className="text-white/90">{issue}</p>
+              <div className="flex items-start space-x-4 mb-4">
+                <div className="bg-black p-2 rounded-full">
+                  <X className="h-5 w-5 text-red-400" />
+                </div>
+                <h3 className="text-xl font-semibold text-white">{problem.title}</h3>
               </div>
+              <p className="text-gray-300 pl-11">{problem.description}</p>
             </div>
           ))}
         </div>

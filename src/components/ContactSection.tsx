@@ -28,7 +28,7 @@ const ContactSection = () => {
           Other Ways to Connect
         </h3>
         
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6 max-w-md mx-auto">
           <div className="card-grain bg-white p-6 rounded-lg shadow-sm">
             <h3 className="text-lg font-semibold mb-5 text-gray-800">Email Us:</h3>
             <ul className="space-y-3">
