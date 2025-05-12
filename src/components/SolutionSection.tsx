@@ -75,9 +75,7 @@ const SolutionSection = () => {
               className="flex flex-col w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33%-1.5rem)] p-8 bg-transparent border border-gray-700 hover:border-gray-500 transition-all rounded-lg"
             >
               <div className="flex items-start space-x-4 mb-4">
-                <div className="bg-transparent p-2 rounded-full border border-gray-700">
-                  <span className="text-2xl">{item.icon}</span>
-                </div>
+                <span className="text-2xl">{item.icon}</span>
                 <h3 className="text-xl font-semibold text-white">{item.title}</h3>
               </div>
               <p className="text-gray-300 pl-11">{item.description}</p>
