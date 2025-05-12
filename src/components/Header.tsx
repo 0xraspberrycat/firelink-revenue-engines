@@ -50,21 +50,21 @@ const Header = () => {
       }`}
     >
       <div className="container mx-auto px-6">
-        <div className="flex justify-between items-center h-20">
+        <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <span className="font-bold text-xl text-navy-800">Firelink</span>
+              <span className="font-bold text-xl text-gray-900">Firelink</span>
             </Link>
           </div>
           
-          <div className="hidden md:flex items-center space-x-12">
+          <div className="hidden md:flex items-center space-x-8">
             <nav>
-              <ul className="flex space-x-12">
+              <ul className="flex space-x-8">
                 {navItems.map((item) => (
                   <li key={item.name}>
                     <button 
                       onClick={() => scrollToSection(item.sectionId)}
-                      className="text-gray-600 hover:text-navy-600 font-bold tracking-tight text-sm transition-colors"
+                      className="text-gray-700 hover:text-gray-900 font-bold tracking-tight text-sm transition-colors"
                     >
                       {item.name}
                     </button>
@@ -75,14 +75,14 @@ const Header = () => {
             
             <Button 
               onClick={() => scrollToSection('book-a-call')} 
-              className="bg-navy-600 hover:bg-navy-700 text-white font-bold"
+              className="bg-gray-900 hover:bg-gray-800 text-white font-bold"
             >
               Book a Call
             </Button>
           </div>
           
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-navy-800 p-2">
+            <button onClick={toggleMenu} className="text-gray-900 p-2">
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -93,7 +93,7 @@ const Header = () => {
       {isOpen && (
         <div className="md:hidden fixed inset-0 bg-white z-50">
           <div className="flex justify-end p-4">
-            <button onClick={toggleMenu} className="text-navy-800 p-2">
+            <button onClick={toggleMenu} className="text-gray-900 p-2">
               <X size={24} />
             </button>
           </div>
@@ -108,7 +108,7 @@ const Header = () => {
                         scrollToSection(item.sectionId);
                         setIsOpen(false);
                       }}
-                      className="block text-navy-800 hover:text-navy-600 font-bold transition-colors text-xl w-full text-left"
+                      className="block text-gray-900 hover:text-gray-600 font-bold transition-colors text-xl w-full text-left"
                     >
                       {item.name}
                     </button>
@@ -119,7 +119,7 @@ const Header = () => {
             
             <div className="mt-10">
               <Button 
-                className="bg-navy-600 hover:bg-navy-700 text-white w-full font-bold"
+                className="bg-gray-900 hover:bg-gray-800 text-white w-full font-bold"
                 onClick={() => {
                   scrollToSection('book-a-call');
                   setIsOpen(false);

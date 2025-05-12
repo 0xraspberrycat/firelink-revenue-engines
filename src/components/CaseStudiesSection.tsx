@@ -1,11 +1,11 @@
 
-import { ArrowRight, X, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
 
 interface CaseStudy {
   client: string;
-  before: string[];
+  industry?: string;
+  highlight: string;
   results: string[];
 }
 
@@ -13,14 +13,9 @@ const CaseStudiesSection = () => {
   const caseStudies: CaseStudy[] = [
     {
       client: "Outreach Insider",
-      before: [
-        "CEO trapped in daily operations",
-        "Manual campaign monitoring consuming hours daily",
-        "Inconsistent client reporting",
-        "Limited visibility into campaign performance"
-      ],
+      industry: "B2B Lead Generation",
+      highlight: "80% reduction in operational workload",
       results: [
-        "80% reduction in operational workload",
         "Automated campaign monitoring with issue detection",
         "Streamlined client reporting system",
         "CEO's first uninterrupted vacation while business ran smoothly",
@@ -29,14 +24,9 @@ const CaseStudiesSection = () => {
     },
     {
       client: "The Deal Lab",
-      before: [
-        "Manual processes creating bottlenecks",
-        "Growth limited by founder's bandwidth",
-        "Team overwhelmed by campaign monitoring",
-        "Inconsistent response handling"
-      ],
+      industry: "Real Estate Lead Gen",
+      highlight: "43% revenue increase ($280K to $400K monthly)",
       results: [
-        "43% revenue increase ($280K to $400K monthly)",
         "Founder reclaimed 15+ hours weekly",
         "Automated campaign performance tracking",
         "Improved lead quality through response filtering",
@@ -45,14 +35,9 @@ const CaseStudiesSection = () => {
     },
     {
       client: "Core Conversions",
-      before: [
-        "Operational inefficiencies in campaign management",
-        "Manual lead tracking and qualification",
-        "Founder pulled into daily operations",
-        "Limited campaign performance visibility"
-      ],
+      industry: "SaaS Lead Generation",
+      highlight: "40% revenue increase in 120 days",
       results: [
-        "40% revenue increase in 120 days",
         "Handled 3x more lead gen campaigns",
         "Implemented real-time KPI dashboards",
         "Automated response filtering and qualification",
@@ -61,14 +46,9 @@ const CaseStudiesSection = () => {
     },
     {
       client: "Spitz PR",
-      before: [
-        "Operating at a loss due to inefficient processes",
-        "30+ hours spent on manual campaign monitoring",
-        "Constant firefighting and missed opportunities",
-        "Poor client reporting and communication"
-      ],
+      industry: "PR Agency",
+      highlight: "Doubled revenue in 90 days",
       results: [
-        "Doubled revenue in 90 days",
         "25% higher client retention rate",
         "Implemented automated client reporting",
         "Created custom dashboards for performance tracking",
@@ -85,55 +65,48 @@ const CaseStudiesSection = () => {
   };
 
   return (
-    <section id="case-studies" className="py-16 bg-gray-50">
-      <div className="section-container max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-10 gradient-text text-center">Client Success Stories</h2>
+    <section id="case-studies" className="py-16 bg-white border-t border-gray-100">
+      <div className="section-container max-w-5xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-gray-900">Client Success Stories</h2>
         
-        <div className="space-y-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 mb-12">
           {caseStudies.map((study, index) => (
-            <Card 
+            <div 
               key={index}
-              className="mb-4 bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden"
+              className="bg-white rounded-xl border border-gray-200 overflow-hidden transition-all hover:shadow-md"
             >
-              <div className="px-5 py-4 border-b border-gray-100">
-                <h3 className="text-xl font-semibold text-firelink-dark">{study.client}</h3>
+              <div className="bg-gray-50 px-6 py-4 border-b border-gray-100">
+                <span className="text-xs text-gray-500 uppercase tracking-wider">{study.industry}</span>
+                <h3 className="text-xl font-bold text-gray-900 mt-1">{study.client}</h3>
               </div>
-              <CardContent className="px-5 py-4">
-                <div className="mb-5">
-                  <h4 className="font-medium text-gray-500 mb-3 text-lg">Before Firelink:</h4>
-                  <ul className="space-y-2">
-                    {study.before.map((item, i) => (
-                      <li key={i} className="text-gray-700 flex items-start text-base">
-                        <span className="h-5 w-5 bg-red-100 text-red-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0 mt-0.5 text-sm">
-                          <X className="h-3 w-3" />
-                        </span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+              
+              <div className="p-6">
+                <div className="bg-gray-100 rounded-lg p-4 mb-6">
+                  <p className="text-gray-800 font-bold text-lg">{study.highlight}</p>
                 </div>
-                <div className="mb-3">
-                  <h4 className="font-medium text-gray-500 mb-3 text-lg">After Firelink:</h4>
-                  <ul className="space-y-2">
-                    {study.results.map((item, i) => (
-                      <li key={i} className="text-gray-700 flex items-start text-base">
-                        <span className="h-5 w-5 bg-green-100 text-green-600 rounded-full flex items-center justify-center mr-3 flex-shrink-0 mt-0.5 text-sm">
-                          <CheckCircle className="h-3 w-3" />
-                        </span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
+                
+                <h4 className="font-medium text-gray-500 mb-3 text-sm uppercase tracking-wider">Key Results</h4>
+                <ul className="space-y-2">
+                  {study.results.map((result, i) => (
+                    <li key={i} className="flex items-start">
+                      <CheckCircle className="h-5 w-5 text-gray-800 mr-3 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700 text-sm">{result}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           ))}
         </div>
 
-        <div className="text-center mt-10">
-          <Button onClick={scrollToBookCall} className="cta-button text-lg group">
+        <div className="text-center mt-10 bg-gray-50 p-8 rounded-xl border border-gray-100">
+          <h3 className="text-2xl font-bold mb-4 text-gray-900">Ready for similar results?</h3>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Book a strategy call to see exactly how our automated systems could transform your lead generation operations.
+          </p>
+          <Button onClick={scrollToBookCall} className="bg-gray-900 text-white hover:bg-gray-800 text-base group">
             Book Your Strategy Call
-            <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
       </div>

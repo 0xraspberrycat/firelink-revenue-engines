@@ -26,40 +26,39 @@ const FalseSolutionSection = () => {
   };
 
   return (
-    <section className="bg-white py-14">
+    <section className="bg-white py-16">
       <div className="section-container max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-3 text-center text-firelink-dark">
+        <h2 className="text-3xl md:text-4xl font-bold mb-3 text-center text-gray-900">
           Why Traditional Approaches Fail
         </h2>
-        <p className="text-center text-gray-600 mb-10 max-w-3xl mx-auto text-xl">
-          Common solutions add complexity instead of solving core issues
+        <p className="text-center text-gray-600 mb-10 max-w-3xl mx-auto">
+          These approaches add complexity rather than solving core issues, creating more dependencies on people rather than creating systems that work independently.
         </p>
         
-        <div className="flex flex-col gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {falseSolutions.map((solution, index) => (
-            <div key={index} className="flex items-start space-x-4 bg-gray-50 p-5 rounded-md animate-fade-in" style={{ animationDelay: `${index * 0.15}s` }}>
-              <div className="text-red-500 flex-shrink-0 mt-1">
-                <X className="h-6 w-6" />
+            <div key={index} className="bg-gray-50 p-6 rounded-xl border border-gray-100">
+              <div className="flex items-start mb-4">
+                <div className="text-red-500 flex-shrink-0 mt-1">
+                  <X className="h-6 w-6" />
+                </div>
+                <h3 className="text-xl font-bold ml-3 text-gray-800">{solution.approach}</h3>
               </div>
-              <div>
-                <h3 className="text-xl font-semibold text-gray-800">{solution.approach}</h3>
-                <p className="text-gray-600 text-lg">{solution.problem}</p>
-              </div>
+              <p className="text-gray-600 text-lg">{solution.problem}</p>
             </div>
           ))}
         </div>
         
-        <div className="mt-12 bg-firelink-light p-8 rounded-lg border-l-4 border-firelink-purple text-center max-w-4xl mx-auto">
-          <h3 className="text-2xl font-semibold mb-5 text-firelink-dark">Why These Solutions Fail</h3>
-          <p className="text-gray-700 text-xl leading-relaxed">
-            These approaches simply add complexity rather than reducing it. They create more 
-            dependencies on people rather than creating systems that work independently. The 
-            real solution is not adding more human effort—it's building intelligent systems 
-            that eliminate the need for constant human intervention.
+        <div className="bg-gray-50 p-8 rounded-xl border border-gray-200 mt-6">
+          <h3 className="text-2xl font-semibold mb-5 text-center text-gray-900">The Real Solution</h3>
+          <p className="text-gray-700 text-lg leading-relaxed text-center max-w-3xl mx-auto">
+            The real solution is not adding more human effort—it's building intelligent systems 
+            that eliminate the need for constant human intervention. Your business needs automation
+            that works independently, runs 24/7, and scales without adding headcount.
           </p>
           
           <div className="mt-8 text-center">
-            <Button onClick={scrollToBookCall} className="bg-firelink-dark text-white hover:bg-firelink-dark/90 text-base group">
+            <Button onClick={scrollToBookCall} className="bg-gray-900 text-white hover:bg-gray-800 text-base group">
               Book Your Strategy Call
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>

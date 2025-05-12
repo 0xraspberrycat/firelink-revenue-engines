@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -20,9 +19,9 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+				sans: ['Inter', 'system-ui', 'sans-serif'],
 				mono: ['monospace', 'SFMono-Regular'],
-				grotesk: ['Space Grotesk', 'system-ui', 'sans-serif'],
+				grotesk: ['Inter', 'system-ui', 'sans-serif'],
 				inter: ['Inter', 'system-ui', 'sans-serif']
 			},
 			colors: {
@@ -59,48 +58,22 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				navy: {
-					50: '#f0f4f8',
-					100: '#d9e2ec',
-					200: '#bcccdc',
-					300: '#9fb3c8',
-					400: '#829ab1',
-					500: '#627d98',
-					600: '#486581',
-					700: '#334e68',
-					800: '#243b53',
-					900: '#102a43'
-				},
-				teal: {
-					50: '#e6fcf5',
-					100: '#c3fae8',
-					200: '#96f2d7',
-					300: '#63e6be',
-					400: '#38d9a9',
-					500: '#20c997',
-					600: '#12b886',
-					700: '#0ca678',
-					800: '#099268',
-					900: '#087f5b'
-				},
-				gold: {
-					50: '#fff8e1',
-					100: '#ffecb3',
-					200: '#ffe082',
-					300: '#ffd54f',
-					400: '#ffca28',
-					500: '#ffc107',
-					600: '#ffb300',
-					700: '#ffa000',
-					800: '#ff8f00',
-					900: '#ff6f00'
+				dark: {
+					50: '#f9fafb',
+					100: '#f3f4f6',
+					200: '#e5e7eb',
+					300: '#d1d5db',
+					400: '#9ca3af',
+					500: '#6b7280',
+					600: '#4b5563',
+					700: '#374151',
+					800: '#1f2937',
+					900: '#111827'
 				},
 				firelink: {
 					dark: "#111111",
-					purple: "#486581", // Changed from bright purple to navy
 					light: "#f8f9fa",
-					orange: "#ffa000", // Changed to more muted gold
-					secondary: "#334e68" // Changed to darker navy
+					secondary: "#333333"
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

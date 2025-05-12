@@ -15,18 +15,18 @@ const BookCallSection = () => {
   }, []);
 
   return (
-    <section id="book-a-call" className="py-24 md:py-32 bg-gray-50">
+    <section id="book-a-call" className="py-16 md:py-24 bg-gray-50 border-t border-gray-100">
       <div className="max-w-5xl mx-auto px-4">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight text-navy-900">
+        <div className="text-center max-w-3xl mx-auto mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-5 tracking-tight text-gray-900">
             Book Your <span className="gradient-text">Strategy Call</span>
           </h2>
-          <p className="text-xl text-gray-600 font-grotesk">
+          <p className="text-lg text-gray-600 mb-8">
             Schedule a 45-minute call to discover how our AI-powered systems can transform your lead generation operations.
           </p>
         </div>
         
-        <div className="premium-card overflow-hidden" style={{ height: "600px" }}>
+        <div className="bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm" style={{ height: "600px" }}>
           <Cal
             calLink="team/firelink/intro"
             style={{ width: "100%", height: "100%", overflow: "scroll" }}

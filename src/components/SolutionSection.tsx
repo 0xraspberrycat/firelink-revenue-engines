@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle, X } from 'lucide-react'; // Added X import here
+import { ArrowRight, CheckCircle, Check } from 'lucide-react';
 
 const SolutionSection = () => {
   const features = [
@@ -27,32 +27,24 @@ const SolutionSection = () => {
     {
       title: "Lead Assignment",
       description: "Intelligent distribution of qualified responses to the right team members."
-    },
-    {
-      title: "Business Intelligence",
-      description: "Proactive alerts about campaign performance and improvement opportunities."
     }
   ];
 
-  const traditional = {
-    approach: "Hire virtual assistants for campaign monitoring",
-    issues: [
-      "High training and management costs",
-      "Human error and inconsistency",
-      "Limited by working hours",
-      "Constant turnover"
-    ]
-  };
+  const benefits = [
+    "80% reduction in campaign monitoring time",
+    "Faster response to promising leads",
+    "Improved client retention through consistent reporting",
+    "Ability to manage more campaigns without adding headcount",
+    "Clear visibility into campaign performance metrics"
+  ];
 
-  const firelink = {
-    approach: "Automated systems that work 24/7 for a fraction of the cost",
-    benefits: [
-      "No management required",
-      "Consistent, error-free performance",
-      "Works around the clock",
-      "Scales with your business"
-    ]
-  };
+  const keyDifferences = [
+    "Complete team replacement at $3-7/hour equivalent cost",
+    "Full ownership of your systems with zero ongoing fees",
+    "Zero management required - systems run autonomously",
+    "Industry-specific knowledge built into every solution",
+    "Public reputation tied to your results"
+  ];
 
   const scrollToBookCall = () => {
     const element = document.getElementById('book-a-call');
@@ -62,77 +54,67 @@ const SolutionSection = () => {
   };
 
   return (
-    <section id="solution" className="py-16 bg-gray-50">
-      <div className="section-container max-w-5xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 gradient-text text-center">
+    <section id="solution" className="py-16 bg-white border-t border-gray-100">
+      <div className="section-container max-w-6xl mx-auto">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center text-gray-900">
           Lead Gen Automation Engine
         </h2>
         
-        <div className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
-          <p className="text-xl mb-6">
-            Firelink builds intelligent systems specifically for lead generation agencies that automate campaign monitoring, reporting, and client communication.
+        <div className="text-center mb-12 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-600">
+            Firelink builds intelligent systems specifically for lead generation agencies that automate campaign monitoring, 
+            reporting, and client communication.
           </p>
         </div>
         
-        <h3 className="text-2xl font-semibold mb-6 text-center">Key Features:</h3>
-        
-        <div className="bg-white p-8 rounded-lg max-w-5xl mx-auto shadow-sm border border-gray-100 mb-12">
-          <div className="space-y-8">
-            {features.map((feature, index) => (
-              <div key={index} className="animate-fade-in p-4 border-b border-gray-100 last:border-b-0" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="flex items-center mb-2">
-                  <CheckCircle className="h-6 w-6 text-green-500 flex-shrink-0 mr-3" />
-                  <h3 className="text-xl font-bold gradient-text">{feature.title}</h3>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+          {/* Left column - Feature Cards */}
+          <div className="lg:col-span-8">
+            <h3 className="text-2xl font-bold mb-6 text-gray-800">Complete Automation Package</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {features.map((feature, index) => (
+                <div key={index} className="bg-white border border-gray-200 rounded-xl p-6 transition-all hover:shadow-md">
+                  <div className="flex items-center mb-3">
+                    <CheckCircle className="h-5 w-5 text-gray-800 flex-shrink-0 mr-3" />
+                    <h4 className="text-lg font-bold text-gray-800">{feature.title}</h4>
+                  </div>
+                  <p className="text-gray-600 pl-8">{feature.description}</p>
                 </div>
-                <div className="pl-9">
-                  <p className="text-gray-700 text-lg">{feature.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        <h3 className="text-2xl font-semibold mb-6 text-center">Comparison:</h3>
-        
-        <div className="grid md:grid-cols-2 gap-6 mb-10">
-          <div className="bg-white p-6 rounded-lg border border-gray-200">
-            <h4 className="text-xl font-semibold mb-4 text-firelink-dark">Traditional Approach:</h4>
-            <p className="text-lg mb-4">{traditional.approach}</p>
-            <ul className="space-y-2">
-              {traditional.issues.map((issue, idx) => (
-                <li key={idx} className="flex items-center text-gray-700">
-                  <X className="h-5 w-5 text-red-500 mr-2 flex-shrink-0" />
-                  <span>{issue}</span>
-                </li>
               ))}
-            </ul>
+            </div>
           </div>
           
-          <div className="bg-white p-6 rounded-lg border border-firelink-purple">
-            <h4 className="text-xl font-semibold mb-4 text-firelink-purple">Firelink Solution:</h4>
-            <p className="text-lg mb-4">{firelink.approach}</p>
-            <ul className="space-y-2">
-              {firelink.benefits.map((benefit, idx) => (
-                <li key={idx} className="flex items-center text-gray-700">
-                  <CheckCircle className="h-5 w-5 text-green-500 mr-2 flex-shrink-0" />
-                  <span>{benefit}</span>
-                </li>
-              ))}
-            </ul>
+          {/* Right column - Results */}
+          <div className="lg:col-span-4">
+            <div className="bg-gray-50 border border-gray-100 rounded-xl p-6 mb-4">
+              <h3 className="text-lg font-bold mb-4 text-gray-800">Expected Results</h3>
+              <ul className="space-y-3">
+                {benefits.map((benefit, index) => (
+                  <li key={index} className="flex items-start">
+                    <Check className="h-5 w-5 text-gray-800 mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-gray-700">{benefit}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="bg-gray-900 text-white rounded-xl p-6">
+              <h3 className="text-lg font-bold mb-4">The Firelink Difference</h3>
+              <ul className="space-y-3">
+                {keyDifferences.map((difference, index) => (
+                  <li key={index} className="flex items-start">
+                    <Check className="h-5 w-5 text-white mr-3 flex-shrink-0 mt-1" />
+                    <span className="text-white/90 text-sm">{difference}</span>
+                  </li>
+                ))}
+              </ul>
+              
+              <Button onClick={scrollToBookCall} className="w-full mt-6 bg-white text-gray-900 hover:bg-gray-100 group">
+                Book Strategy Call
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
           </div>
-        </div>
-
-        <div className="mt-12 bg-firelink-dark text-white p-8 rounded-lg text-center max-w-4xl mx-auto">
-          <h3 className="text-2xl font-semibold mb-4">Ready to Automate Your Lead Gen Agency?</h3>
-          <p className="text-lg mb-6">
-            Most lead gen agencies struggle with operational chaos, watching their freedom and profits drain away day by day. 
-            The few who break free do it by building systems that work without them.
-          </p>
-          <p className="text-xl font-medium mb-6">Which path will you choose?</p>
-          <Button onClick={scrollToBookCall} className="bg-white text-firelink-dark hover:bg-gray-200 text-base group">
-            BOOK YOUR STRATEGY CALL
-            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
         </div>
       </div>
     </section>

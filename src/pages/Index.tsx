@@ -4,9 +4,7 @@ import Hero from "@/components/Hero";
 import ProblemSection from "@/components/ProblemSection";
 import FalseSolutionSection from "@/components/FalseSolutionSection";
 import SolutionSection from "@/components/SolutionSection";
-import LeadGenOfferSection from "@/components/LeadGenOfferSection";
 import CaseStudiesSection from "@/components/CaseStudiesSection";
-import FirelinkDifferenceSection from "@/components/FirelinkDifferenceSection";
 import AlternativeSolutionsSection from "@/components/AlternativeSolutionsSection";
 import ContactSection from "@/components/ContactSection";
 import BookCallSection from "@/components/BookCallSection";
@@ -22,11 +20,9 @@ const Index = () => {
         <ProblemSection />
         <FalseSolutionSection />
         <SolutionSection />
-        <CTASection />
         <AlternativeSolutionsSection />
-        <LeadGenOfferSection />
         <CaseStudiesSection />
-        <FirelinkDifferenceSection />
+        <CTASection />
         <ContactSection />
         <BookCallSection />
       </main>
