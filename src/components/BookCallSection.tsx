@@ -1,4 +1,3 @@
-
 import { useEffect } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { Mail, ArrowUpRight } from "lucide-react";
@@ -69,7 +68,7 @@ const BookCallSection = () => {
             
             <div>
               <h4 className="font-medium text-gray-800 mb-4">Find Us on X:</h4>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-col gap-3">
                 <Button 
                   variant="outline" 
                   className="justify-start text-gray-700 hover:text-gray-900"
