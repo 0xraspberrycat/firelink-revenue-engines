@@ -19,10 +19,6 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				sans: ['Space Grotesk', 'monospace'],
-				mono: ['monospace'],
-			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -112,23 +108,7 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
         'fade-in': 'fade-in 0.5s ease-out forwards'
-			},
-      typography: {
-        DEFAULT: {
-          css: {
-            'h1, h2': {
-              fontWeight: 700,
-              lineHeight: 1.15,
-            },
-            'h3, h4': {
-              fontWeight: 600,
-            },
-            body: {
-              lineHeight: 1.5,
-            }
-          }
-        }
-      }
+			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
