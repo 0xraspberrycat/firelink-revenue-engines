@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -47,10 +46,13 @@ const Video = () => {
               team member – all by implementing the Revenue Engine system.
             </p>
             
-            <Button onClick={scrollToBookCall} className="cta-button group text-base">
-              Book Your Strategy Session
-              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            {/* Added div to center the first button */}
+            <div className="flex justify-center">
+              <Button onClick={scrollToBookCall} className="cta-button group text-base">
+                Book Your Strategy Session
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </div>
           </div>
         </div>
 
@@ -248,7 +250,7 @@ const Video = () => {
       
       <footer className="bg-firelink-dark text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; {new Date().getFullYear()} Firelink. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Firelink. All rights reserved.</p>
           <div className="mt-4">
             <Link to="/" className="text-white hover:text-firelink-purple transition-colors">Home</Link>
           </div>
