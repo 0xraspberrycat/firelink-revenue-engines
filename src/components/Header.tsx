@@ -48,7 +48,7 @@ const Header = () => {
                   <li key={item.name}>
                     <button 
                       onClick={() => scrollToSection(item.sectionId)}
-                      className="text-firelink-dark hover:text-firelink-purple transition-colors"
+                      className="text-nav text-firelink-dark hover:text-firelink-purple transition-colors"
                     >
                       {item.name}
                     </button>
@@ -59,7 +59,7 @@ const Header = () => {
             
             <Button 
               onClick={() => scrollToSection('book-a-call')} 
-              className="bg-firelink-dark hover:bg-firelink-purple text-white"
+              className="bg-firelink-dark hover:bg-firelink-purple text-white text-button"
             >
               Book a Call
             </Button>
@@ -92,7 +92,7 @@ const Header = () => {
                         scrollToSection(item.sectionId);
                         setIsOpen(false);
                       }}
-                      className="block text-firelink-dark hover:text-firelink-purple transition-colors text-lg w-full text-left"
+                      className="text-nav block text-firelink-dark hover:text-firelink-purple transition-colors w-full text-left"
                     >
                       {item.name}
                     </button>
@@ -103,7 +103,7 @@ const Header = () => {
             
             <div className="mt-8">
               <Button 
-                className="bg-firelink-dark hover:bg-firelink-purple text-white w-full"
+                className="bg-firelink-dark hover:bg-firelink-purple text-white w-full text-button"
                 onClick={() => {
                   scrollToSection('book-a-call');
                   setIsOpen(false);
