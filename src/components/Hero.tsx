@@ -20,7 +20,7 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto">
           <div className="text-left md:text-center mb-10 md:mb-14">
             <h1 className="premium-heading mb-6 text-gray-900 heading-grain">
-              <span className="gradient-text">Automate Your Lead Gen</span> <br className="hidden sm:block" />
+              <span className="gradient-text">Automate Your Lead Gen Agency</span> <br className="hidden sm:block" />
               Scale Without Chaos
             </h1>
             
