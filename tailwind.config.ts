@@ -20,8 +20,10 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Space Grotesk', 'system-ui', 'sans-serif'],
-				mono: ['monospace', 'SFMono-Regular']
+				sans: ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif'],
+				mono: ['monospace', 'SFMono-Regular'],
+				grotesk: ['Space Grotesk', 'system-ui', 'sans-serif'],
+				inter: ['Inter', 'system-ui', 'sans-serif']
 			},
 			colors: {
 				border: 'hsl(var(--border))',
@@ -57,12 +59,48 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				navy: {
+					50: '#f0f4f8',
+					100: '#d9e2ec',
+					200: '#bcccdc',
+					300: '#9fb3c8',
+					400: '#829ab1',
+					500: '#627d98',
+					600: '#486581',
+					700: '#334e68',
+					800: '#243b53',
+					900: '#102a43'
+				},
+				teal: {
+					50: '#e6fcf5',
+					100: '#c3fae8',
+					200: '#96f2d7',
+					300: '#63e6be',
+					400: '#38d9a9',
+					500: '#20c997',
+					600: '#12b886',
+					700: '#0ca678',
+					800: '#099268',
+					900: '#087f5b'
+				},
+				gold: {
+					50: '#fff8e1',
+					100: '#ffecb3',
+					200: '#ffe082',
+					300: '#ffd54f',
+					400: '#ffca28',
+					500: '#ffc107',
+					600: '#ffb300',
+					700: '#ffa000',
+					800: '#ff8f00',
+					900: '#ff6f00'
+				},
 				firelink: {
 					dark: "#111111",
-					purple: "#7C3AED",
+					purple: "#486581", // Changed from bright purple to navy
 					light: "#f8f9fa",
-					orange: "#F97316",
-					secondary: "#5B21B6"
+					orange: "#ffa000", // Changed to more muted gold
+					secondary: "#334e68" // Changed to darker navy
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
@@ -79,6 +117,22 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			letterSpacing: {
+				tighter: '-0.05em',
+				tight: '-0.025em',
+				normal: '0em',
+				wide: '0.025em',
+				wider: '0.05em',
+				widest: '0.1em',
+			},
+			lineHeight: {
+				tighter: '1.1',
+				tight: '1.2',
+				snug: '1.3',
+				normal: '1.5',
+				relaxed: '1.625',
+				loose: '2',
 			},
 			keyframes: {
 				'accordion-down': {

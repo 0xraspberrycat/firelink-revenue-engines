@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,7 +17,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    --primary: 240 5.9% 10%;
+    --primary: 215 28% 17%;
     --primary-foreground: 0 0% 98%;
 
     --secondary: 240 4.8% 95.9%;
@@ -33,7 +34,7 @@
 
     --border: 240 5.9% 90%;
     --input: 240 5.9% 90%;
-    --ring: 240 5.9% 10%;
+    --ring: 215 28% 17%;
 
     --radius: 0.5rem;
   }
@@ -75,7 +76,7 @@
   }
   
   html {
-    font-family: 'Space Grotesk', system-ui, sans-serif;
+    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
     @apply scroll-smooth;
   }
   
@@ -84,19 +85,19 @@
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight tracking-tight;
+    @apply text-3xl md:text-5xl lg:text-7xl xl:text-8xl font-bold leading-tight tracking-tight;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold leading-tight tracking-tight;
+    @apply text-2xl md:text-4xl lg:text-6xl font-bold leading-tight tracking-tight;
   }
 
   h3 {
-    @apply text-xl md:text-2xl font-semibold leading-snug;
+    @apply text-xl md:text-2xl font-semibold leading-snug tracking-tight;
   }
 
   h4 {
-    @apply text-lg md:text-xl font-semibold leading-snug;
+    @apply text-lg md:text-xl font-semibold leading-snug tracking-tight;
   }
 
   p {
@@ -106,19 +107,19 @@
 
 @layer components {
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 py-16 md:py-24;
+    @apply max-w-7xl mx-auto px-4 sm:px-8 py-20 md:py-32;
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-navy-600 to-navy-800 bg-clip-text text-transparent;
   }
 
   .cta-button {
-    @apply bg-primary hover:opacity-90 text-white font-medium py-3 px-8 rounded-md transition-all duration-300;
+    @apply bg-navy-600 hover:bg-navy-700 text-white font-bold py-3 px-8 rounded-md transition-all duration-300;
   }
 
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight tracking-tight;
   }
 
   .section-subtitle {
@@ -129,11 +130,11 @@
 /* Animations */
 .fade-in {
   opacity: 0;
-  animation: fadeIn 0.6s ease-out forwards;
+  animation: fadeIn 0.9s ease-out forwards;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
@@ -154,3 +155,38 @@ html, body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+/* Enterprise-premium specific styles */
+.enterprise-layout {
+  @apply max-w-screen-2xl mx-auto;
+}
+
+.premium-card {
+  @apply bg-white shadow-sm border border-gray-100 rounded-lg transition-all duration-300;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+}
+
+.premium-card:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+.premium-section {
+  @apply py-24 md:py-32 lg:py-40;
+}
+
+.premium-heading {
+  @apply font-bold tracking-tight text-[2.5rem] md:text-[3.5rem] lg:text-[4.5rem] xl:text-[6rem] leading-[1.1];
+}
+
+.premium-subheading {
+  @apply font-medium text-xl md:text-2xl text-gray-600 max-w-3xl;
+}
+
+.premium-btn {
+  @apply px-6 py-3 md:px-8 md:py-4 bg-navy-600 hover:bg-navy-700 text-white rounded-md font-bold text-sm md:text-base transition-all duration-200;
+}
+
+.premium-btn-outline {
+  @apply px-6 py-3 md:px-8 md:py-4 bg-transparent border-2 border-navy-600 text-navy-600 hover:bg-navy-50 rounded-md font-bold text-sm md:text-base transition-all duration-200;
+}
+

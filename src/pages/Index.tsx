@@ -10,6 +10,7 @@ import FirelinkDifferenceSection from "@/components/FirelinkDifferenceSection";
 import AlternativeSolutionsSection from "@/components/AlternativeSolutionsSection";
 import ContactSection from "@/components/ContactSection";
 import BookCallSection from "@/components/BookCallSection";
+import CTASection from "@/components/CTASection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -21,6 +22,7 @@ const Index = () => {
         <ProblemSection />
         <FalseSolutionSection />
         <SolutionSection />
+        <CTASection />
         <AlternativeSolutionsSection />
         <LeadGenOfferSection />
         <CaseStudiesSection />
