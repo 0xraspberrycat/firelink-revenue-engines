@@ -4,9 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
+import { 
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerTrigger
+} from "@/components/ui/drawer";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const isMobile = useIsMobile();
   const location = useLocation();
@@ -32,34 +37,16 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Prevent body scroll when mobile menu is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = '';
-    }
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isOpen]);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
   const scrollToSection = (sectionId: string) => {
     // If Home is clicked, scroll to top first
     if (sectionId === "hero") {
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      if (isOpen) setIsOpen(false);
       return;
     }
     
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      if (isOpen) setIsOpen(false);
     }
   };
 
@@ -84,6 +71,7 @@ const Header = () => {
             </Link>
           </div>
           
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <nav>
               <ul className="flex space-x-8">
@@ -108,63 +96,67 @@ const Header = () => {
             </Button>
           </div>
           
-          <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-gray-900 p-2">
-              {isOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-          </div>
+          {/* Mobile Drawer Navigation */}
+          {isMobile && (
+            <Drawer>
+              <DrawerTrigger asChild>
+                <Button variant="ghost" size="icon" className="md:hidden">
+                  <Menu size={24} />
+                </Button>
+              </DrawerTrigger>
+              <DrawerContent className="max-h-[80vh] rounded-t-xl">
+                <div className="py-4 px-6">
+                  <div className="flex items-center justify-between mb-6">
+                    <Link 
+                      to="/" 
+                      className="font-bold text-xl text-gray-900"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                    >
+                      FireLink
+                    </Link>
+                    <DrawerClose asChild>
+                      <Button variant="ghost" size="icon">
+                        <X size={24} />
+                      </Button>
+                    </DrawerClose>
+                  </div>
+                  
+                  <nav className="pb-6">
+                    <ul className="space-y-4">
+                      {navItems.map((item) => (
+                        <li key={item.name}>
+                          <DrawerClose asChild>
+                            <button
+                              onClick={() => scrollToSection(item.sectionId)}
+                              className="block w-full text-left text-gray-900 hover:text-gray-600 font-bold transition-colors text-lg py-2"
+                            >
+                              {item.name}
+                            </button>
+                          </DrawerClose>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                  
+                  <div className="pt-4 border-t border-gray-100">
+                    <DrawerClose asChild>
+                      <Button 
+                        className="bg-black hover:bg-gray-800 text-white w-full font-bold py-6 mt-4"
+                        size="lg"
+                        onClick={() => scrollToSection('book-a-call')}
+                      >
+                        Book a Call
+                      </Button>
+                    </DrawerClose>
+                  </div>
+                </div>
+              </DrawerContent>
+            </Drawer>
+          )}
         </div>
       </div>
-      
-      {/* Mobile menu - Fixed fullscreen with improved styling */}
-      {isOpen && (
-        <div className="md:hidden fixed inset-0 bg-white z-50 flex flex-col">
-          <div className="flex justify-between items-center px-6 h-16 border-b border-gray-100">
-            <Link to="/" className="flex items-center" onClick={() => {
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-              setIsOpen(false);
-            }}>
-              <span className="font-bold text-xl text-gray-900">FireLink</span>
-            </Link>
-            <button onClick={toggleMenu} className="text-gray-900 p-2">
-              <X size={24} />
-            </button>
-          </div>
-          
-          <div className="flex-1 flex flex-col overflow-auto">
-            <nav className="py-8 px-6">
-              <ul className="space-y-6">
-                {navItems.map((item) => (
-                  <li key={item.name}>
-                    <button
-                      onClick={() => {
-                        scrollToSection(item.sectionId);
-                        setIsOpen(false);
-                      }}
-                      className="block text-gray-900 hover:text-gray-600 font-bold transition-colors text-xl w-full text-left"
-                    >
-                      {item.name}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-            
-            <div className="mt-auto px-6 py-8 border-t border-gray-100">
-              <Button 
-                className="bg-black hover:bg-gray-800 text-white w-full font-bold py-6"
-                size="lg"
-                onClick={() => {
-                  scrollToSection('book-a-call');
-                  setIsOpen(false);
-                }}
-              >
-                Book a Call
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
     </header>
   );
 };
