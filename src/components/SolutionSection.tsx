@@ -5,39 +5,46 @@ import { ArrowRight, Check } from "lucide-react";
 const SolutionSection = () => {
   const systems = [
     {
-      title: "Campaign Monitoring",
-      description: "Automated alerts for underperforming campaigns and immediate notification when prospects respond"
+      title: "Make More Money",
+      items: [
+        {
+          title: "Campaign Monitoring",
+          description: "Automated alerts for underperforming campaigns and prospect responses"
+        },
+        {
+          title: "Response Filtering",
+          description: "Smart filtering that prioritizes high-intent responses and removes time-wasters"
+        },
+        {
+          title: "Client Reporting",
+          description: "Automated reporting that shows clients their ROI in real time"
+        },
+        {
+          title: "Lead Qualification",
+          description: "Automated scoring and segmentation based on engagement signals"
+        }
+      ]
     },
     {
-      title: "Response Filtering",
-      description: "Smart filtering that prioritizes high-intent responses and removes time-wasting messages"
-    },
-    {
-      title: "Client Reporting",
-      description: "Automated reporting that shows clients their ROI and campaign performance in real time"
-    },
-    {
-      title: "Performance Dashboard",
-      description: "Complete overview of all active campaigns, response rates, and conversion metrics"
-    },
-    {
-      title: "Lead Qualification",
-      description: "Automated scoring and segmentation of leads based on engagement signals"
-    },
-    {
-      title: "Follow-up System",
-      description: "Intelligent follow-up sequences that adapt to prospect engagement levels"
-    }
-  ];
-
-  const benefits = [
-    {
-      title: "Client Retention",
-      description: "Transparent reporting builds trust and extends client relationships"
-    },
-    {
-      title: "Time Reclaimed",
-      description: "Eliminate manual monitoring and get back 15+ hours every week"
+      title: "In Less Time",
+      items: [
+        {
+          title: "Performance Dashboard",
+          description: "Complete overview of all active campaigns and metrics"
+        },
+        {
+          title: "Follow-up System",
+          description: "Intelligent sequences that adapt to prospect engagement levels"
+        },
+        {
+          title: "Client Retention",
+          description: "Transparent reporting builds trust and extends relationships"
+        },
+        {
+          title: "Time Reclaimed",
+          description: "Eliminate manual monitoring and get back 15+ hours every week"
+        }
+      ]
     }
   ];
 
@@ -47,7 +54,7 @@ const SolutionSection = () => {
 
   return (
     <section id="lead-gen-offer" className="py-16 bg-gray-50">
-      <div className="section-container">
+      <div className="section-container max-w-5xl mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center gradient-text heading-grain">
             Lead Gen Automation Engine
@@ -57,35 +64,20 @@ const SolutionSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-5">
-          {/* Top two rows with 6 equal cards */}
-          {systems.map((system, index) => (
-            <div 
-              key={index} 
-              className="card-grain col-span-1 md:col-span-2 bg-white p-6 rounded-xl border border-gray-100 shadow-sm"
-            >
-              <h3 className="font-bold text-xl mb-3 text-gray-900">{system.title}</h3>
-              <p className="text-gray-600">{system.description}</p>
-            </div>
-          ))}
-
-          {/* Bottom row with 2 larger cards */}
-          {benefits.map((benefit, index) => (
-            <div 
-              key={`benefit-${index}`}
-              className="card-grain col-span-1 md:col-span-3 bg-white p-7 rounded-xl border border-gray-100 shadow-sm flex flex-col"
-            >
-              <h3 className="font-bold text-xl mb-3 text-gray-900">{benefit.title}</h3>
-              <p className="text-gray-600 mb-3">{benefit.description}</p>
-              <div className="mt-auto">
-                <Button
-                  onClick={scrollToBookCall}
-                  variant="outline" 
-                  className="mt-2 border-gray-300 hover:bg-gray-50 text-gray-700 group"
-                >
-                  Learn More
-                  <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                </Button>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {systems.map((column, columnIndex) => (
+            <div key={columnIndex} className="space-y-4">
+              <h3 className="text-2xl font-bold mb-4 text-gray-800 heading-grain">{column.title}</h3>
+              <div className="grid grid-cols-1 gap-4">
+                {column.items.map((item, itemIndex) => (
+                  <div 
+                    key={itemIndex} 
+                    className="card-grain bg-white p-6 rounded-xl border border-gray-100 shadow-sm"
+                  >
+                    <h4 className="font-bold text-xl mb-3 text-gray-900">{item.title}</h4>
+                    <p className="text-gray-600">{item.description}</p>
+                  </div>
+                ))}
               </div>
             </div>
           ))}

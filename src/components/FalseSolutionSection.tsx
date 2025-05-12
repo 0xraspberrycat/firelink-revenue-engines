@@ -18,6 +18,12 @@ const FalseSolutionSection = () => {
     }
   ];
 
+  const realSolutions = [
+    "Automation that works independently",
+    "Systems that run 24/7 without oversight",
+    "Scaling without adding headcount"
+  ];
+
   const scrollToBookCall = () => {
     const element = document.getElementById('book-a-call');
     if (element) {
@@ -35,49 +41,49 @@ const FalseSolutionSection = () => {
           Adding complexity rather than solving core issues creates more dependencies on people instead of systems that work independently.
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-          {falseSolutions.map((solution, index) => (
-            <div key={index} className="card-grain bg-gray-50 p-6 rounded-xl border border-gray-200">
-              <div className="flex items-start mb-4">
-                <div className="text-red-500 flex-shrink-0 mt-1">
-                  <X className="h-6 w-6" />
+        <div className="grid grid-cols-1 gap-6">
+          <div className="card-grain bg-gray-50 p-7 rounded-xl border border-gray-200">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              {falseSolutions.map((solution, index) => (
+                <div key={index} className="flex flex-col">
+                  <div className="flex items-start mb-4">
+                    <div className="text-red-500 flex-shrink-0 mt-1">
+                      <X className="h-6 w-6" />
+                    </div>
+                    <h3 className="text-xl font-bold ml-3 text-gray-800">{solution.approach}</h3>
+                  </div>
+                  <p className="text-gray-600">{solution.problem}</p>
                 </div>
-                <h3 className="text-xl font-bold ml-3 text-gray-800">{solution.approach}</h3>
-              </div>
-              <p className="text-gray-600">{solution.problem}</p>
-            </div>
-          ))}
-        </div>
-        
-        <div className="card-grain bg-gray-50 p-7 rounded-xl border border-gray-200 mt-6">
-          <h3 className="text-2xl font-semibold mb-5 text-center text-gray-900">The Real Solution</h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-            <div className="space-y-4">
-              <p className="text-gray-700 leading-relaxed">
-                The real solution isn't adding more human effort—it's building intelligent systems 
-                that eliminate the need for constant human intervention.
-              </p>
-              
-              <ul className="space-y-3">
-                {[
-                  "Automation that works independently",
-                  "Systems that run 24/7 without oversight",
-                  "Scaling without adding headcount"
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start">
-                    <Check className="h-5 w-5 text-gray-800 mr-3 flex-shrink-0 mt-1" />
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+              ))}
             </div>
             
-            <div className="flex items-center justify-center">
-              <Button onClick={scrollToBookCall} className="bg-gray-900 text-white hover:bg-gray-800 text-base group">
-                Book Your Strategy Call
-                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
+            <div className="bg-white p-6 rounded-lg border border-gray-100">
+              <h3 className="text-2xl font-semibold mb-5 text-center text-gray-900">The Real Solution</h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <p className="text-gray-700 leading-relaxed">
+                    The real solution isn't adding more human effort—it's building intelligent systems 
+                    that eliminate the need for constant human intervention.
+                  </p>
+                  
+                  <ul className="space-y-3">
+                    {realSolutions.map((item, idx) => (
+                      <li key={idx} className="flex items-start">
+                        <Check className="h-5 w-5 text-gray-800 mr-3 flex-shrink-0 mt-1" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                
+                <div className="flex items-center justify-center">
+                  <Button onClick={scrollToBookCall} className="bg-gray-900 text-white hover:bg-gray-800 text-base group">
+                    Book Your Strategy Call
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

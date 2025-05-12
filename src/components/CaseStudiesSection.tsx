@@ -45,6 +45,17 @@ const CaseStudiesSection = () => {
       ]
     },
     {
+      client: "Profit Path",
+      industry: "Growth Strategy Agency",
+      highlight: "35% increase in client retention",
+      results: [
+        "Automated client onboarding process",
+        "Implemented performance analytics dashboard",
+        "Streamlined communication between team members",
+        "Reduced operational overhead by 25%"
+      ]
+    },
+    {
       client: "Spitz PR",
       industry: "PR Agency",
       highlight: "Doubled revenue in 90 days",
@@ -69,7 +80,7 @@ const CaseStudiesSection = () => {
       <div className="section-container max-w-5xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-gray-900 heading-grain">Client Success Stories</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="grid grid-cols-1 gap-6 mb-12 max-w-3xl mx-auto">
           {caseStudies.map((study, index) => (
             <div 
               key={index}
