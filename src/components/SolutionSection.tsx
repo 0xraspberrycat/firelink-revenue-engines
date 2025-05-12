@@ -75,9 +75,7 @@ const SolutionSection = () => {
               className="bg-white p-7 rounded-lg h-full text-black hover:shadow-md transition-all"
             >
               <div className="flex items-start gap-4">
-                <div className="bg-black p-2 rounded-md flex-shrink-0">
-                  <span className="text-2xl" aria-hidden="true">{item.icon}</span>
-                </div>
+                <span className="text-2xl" aria-hidden="true">{item.icon}</span>
                 <div>
                   <h4 className="font-bold text-xl mb-3">{item.title}</h4>
                   <p className="text-gray-700">{item.description}</p>

@@ -18,7 +18,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-8">
           <div className="mb-6 md:mb-0">
             <div className="text-xl font-bold">
-              <span className="text-white">FireLink</span>
+              <span className="text-white">Fire<span>Link</span></span>
             </div>
           </div>
           

@@ -46,10 +46,10 @@ const ProblemSection = () => {
           {problems.map((problem, index) => (
             <div 
               key={index} 
-              className="flex flex-col w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33%-1.5rem)] p-8 bg-gray-900 border border-gray-800 hover:border-gray-700 transition-all rounded-lg"
+              className="flex flex-col w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33%-1.5rem)] p-8 bg-transparent border border-gray-700 hover:border-gray-500 transition-all rounded-lg"
             >
               <div className="flex items-start space-x-4 mb-4">
-                <div className="bg-black p-2 rounded-full">
+                <div className="bg-transparent p-2 rounded-full border border-gray-700">
                   <X className="h-5 w-5 text-red-400" />
                 </div>
                 <h3 className="text-xl font-semibold text-white">{problem.title}</h3>

@@ -1,3 +1,4 @@
+
 import { useEffect } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { Mail, ArrowUpRight } from "lucide-react";
@@ -41,8 +42,8 @@ const BookCallSection = () => {
 
         <div className="bg-white border border-gray-100 rounded-lg p-6 shadow-sm">
           <h3 className="text-xl font-semibold mb-6 text-center">Contact Us</h3>
-          <div className="flex justify-center gap-10 items-stretch">
-            <div className="w-1/2 flex flex-col">
+          <div className="flex flex-col md:flex-row justify-center gap-10 items-stretch">
+            <div className="md:w-1/2 flex flex-col">
               <h4 className="font-medium text-gray-800 mb-4">Email Us:</h4>
               <ul className="space-y-3">
                 <li>
@@ -66,7 +67,7 @@ const BookCallSection = () => {
               </ul>
             </div>
             
-            <div className="w-1/2 flex flex-col">
+            <div className="md:w-1/2 flex flex-col mt-6 md:mt-0">
               <h4 className="font-medium text-gray-800 mb-4">Find Us on X:</h4>
               <div className="flex flex-col gap-3">
                 <Button 
