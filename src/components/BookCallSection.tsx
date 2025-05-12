@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import Cal, { getCalApi } from "@calcom/embed-react";
 import { Mail, ArrowUpRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import ContactSection from "./ContactSection";
 
 const BookCallSection = () => {
   useEffect(() => {
@@ -18,7 +17,7 @@ const BookCallSection = () => {
   }, []);
 
   return (
-    <section id="book-a-call" className="pt-16 pb-8 md:pt-16 md:pb-16 bg-gray-50 border-t border-gray-100">
+    <section id="book-a-call" className="pt-16 pb-16 bg-gray-50 border-t border-gray-100">
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center max-w-3xl mx-auto mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-5 tracking-tight text-gray-900">
@@ -43,7 +42,7 @@ const BookCallSection = () => {
 
         <div className="bg-white border border-gray-100 rounded-lg p-6 shadow-sm">
           <h3 className="text-xl font-semibold mb-6 text-center">Contact Us</h3>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="flex flex-wrap justify-center gap-10">
             <div>
               <h4 className="font-medium text-gray-800 mb-4">Email Us:</h4>
               <ul className="space-y-3">
@@ -70,7 +69,7 @@ const BookCallSection = () => {
             
             <div>
               <h4 className="font-medium text-gray-800 mb-4">Find Us on X:</h4>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="flex flex-wrap gap-3">
                 <Button 
                   variant="outline" 
                   className="justify-start text-gray-700 hover:text-gray-900"

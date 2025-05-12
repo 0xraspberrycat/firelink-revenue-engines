@@ -55,12 +55,12 @@ const FalseSolutionSection = () => {
           ))}
           
           <div className="p-7 rounded-lg border border-gray-200 bg-white mt-8">
-            <h3 className="text-2xl font-semibold mb-5 text-center text-gray-900">The Real Solution</h3>
+            <h3 className="text-2xl font-semibold mb-5 text-gray-900">The Real Solution</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-4">
-                <p className="text-gray-700 leading-relaxed">
-                  The real solution isn't adding more human effort—it's building intelligent systems 
+                <p className="text-gray-700 leading-relaxed text-left">
+                  The real solution isn't adding more human effort. It's building intelligent systems 
                   that eliminate the need for constant human intervention.
                 </p>
               </div>

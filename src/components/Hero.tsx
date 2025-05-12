@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white pointer-events-none"></div>
       
       <div className="relative section-container">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-left md:text-center mb-10 md:mb-14">
             <h1 className="premium-heading mb-6 text-gray-900">
               <span className="gradient-text">Automate Your Lead Gen Agency</span> <br className="hidden sm:block" />

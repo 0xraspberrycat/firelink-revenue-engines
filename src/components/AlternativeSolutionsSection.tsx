@@ -27,16 +27,16 @@ const AlternativeSolutionsSection = () => {
             </p>
           </div>
           
-          <div className="w-full">
+          <div className="w-full p-6">
             <img 
               src="/lovable-uploads/e382e743-77c8-414f-a21a-163ef0498d18.png" 
               alt="Twitter post showing Fiverr/Upwork expert scam" 
-              className="w-full object-contain h-[400px]"
+              className="w-full h-auto max-h-[400px] object-contain mx-auto"
             />
           </div>
           
           <div className="p-8 text-center">
-            <h4 className="text-lg font-bold mb-4 text-gray-800">The Firelink Difference:</h4>
+            <h4 className="text-lg font-bold mb-4 text-gray-800">The FireLink Difference:</h4>
             <ul className="max-w-md mx-auto mb-6 space-y-2">
               <li className="flex items-start justify-center">
                 <Check className="h-5 w-5 text-gray-800 mr-3 mt-1 flex-shrink-0" />

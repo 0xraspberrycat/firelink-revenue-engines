@@ -37,7 +37,7 @@ const ProblemSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {columns.map((column, columnIndex) => (
-            <div key={columnIndex} className="p-6 bg-gray-800/60 rounded-lg border border-gray-700/30">
+            <div key={columnIndex} className="p-6 bg-gray-900 rounded-lg border border-gray-800">
               <h3 className="text-xl font-semibold mb-6 text-gray-200">{column.title}</h3>
               <div className="space-y-4">
                 {column.issues.map((issue, index) => (
@@ -62,7 +62,7 @@ const ProblemSection = () => {
           ].map((issue, index) => (
             <div 
               key={index} 
-              className="flex flex-col p-5 bg-gray-800/60 rounded-lg border border-gray-700/30"
+              className="flex flex-col p-5 bg-gray-900 rounded-lg border border-gray-800"
             >
               <div className="flex items-start space-x-3 mb-2">
                 <X className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
