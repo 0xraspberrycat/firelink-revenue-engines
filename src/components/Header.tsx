@@ -28,6 +28,13 @@ const Header = () => {
   };
 
   const scrollToSection = (sectionId: string) => {
+    // If Home is clicked, scroll to top first
+    if (sectionId === "hero") {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      if (isOpen) setIsOpen(false);
+      return;
+    }
+    
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -51,7 +58,7 @@ const Header = () => {
       <div className="container mx-auto px-6">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <Link to="/" className="flex items-center">
+            <Link to="/" className="flex items-center" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <span className="font-bold text-xl text-gray-900">FireLink</span>
             </Link>
           </div>
