@@ -56,7 +56,7 @@ const SolutionSection = () => {
   };
 
   return (
-    <section id="lead-gen-offer" className="py-16 bg-black text-white">
+    <section id="solution" className="py-16 bg-black text-white">
       <div className="section-container max-w-6xl mx-auto">
         <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
@@ -68,25 +68,25 @@ const SolutionSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {systems.map((item, index) => (
             <div 
               key={index} 
-              className="bg-white p-7 rounded-lg h-full text-black hover:shadow-md transition-all"
+              className="flex flex-col w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33%-1.5rem)] p-8 bg-transparent border border-gray-700 hover:border-gray-500 transition-all rounded-lg"
             >
-              <div className="flex items-start gap-4">
-                <span className="text-2xl" aria-hidden="true">{item.icon}</span>
-                <div>
-                  <h4 className="font-bold text-xl mb-3">{item.title}</h4>
-                  <p className="text-gray-700">{item.description}</p>
+              <div className="flex items-start space-x-4 mb-4">
+                <div className="bg-transparent p-2 rounded-full border border-gray-700">
+                  <span className="text-2xl">{item.icon}</span>
                 </div>
+                <h3 className="text-xl font-semibold text-white">{item.title}</h3>
               </div>
+              <p className="text-gray-300 pl-11">{item.description}</p>
             </div>
           ))}
         </div>
 
         <div className="mt-12 text-center">
-          <Button onClick={scrollToBookCall} className="bg-white hover:bg-gray-200 text-black px-8 py-6 text-lg font-bold rounded-md group">
+          <Button onClick={scrollToBookCall} className="bg-black hover:bg-gray-800 text-white px-8 py-6 text-lg font-bold rounded-md group">
             Get Your Custom Automation System
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
