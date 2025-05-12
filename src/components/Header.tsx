@@ -39,8 +39,7 @@ const Header = () => {
     { name: "Home", sectionId: "hero" },
     { name: "Problem", sectionId: "problem" },
     { name: "Solution", sectionId: "solution" },
-    { name: "Case Studies", sectionId: "case-studies" },
-    { name: "Contact", sectionId: "contact" }
+    { name: "Case Studies", sectionId: "case-studies" }
   ];
 
   return (

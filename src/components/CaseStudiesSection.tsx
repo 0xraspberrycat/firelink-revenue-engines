@@ -115,7 +115,7 @@ const CaseStudiesSection = () => {
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
             Book a strategy call to see exactly how our automated systems could transform your lead generation operations.
           </p>
-          <Button onClick={scrollToBookCall} className="bg-gray-900 text-white hover:bg-gray-800 text-base group">
+          <Button onClick={scrollToBookCall} className="bg-black text-white hover:bg-gray-800 text-base group">
             Book Your Strategy Call
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Button>
