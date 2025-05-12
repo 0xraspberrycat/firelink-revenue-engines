@@ -11,11 +11,11 @@ const Hero = () => {
   };
 
   return (
-    <section id="hero" className="relative pt-12 md:pt-16 pb-12 md:pb-16 overflow-hidden">
+    <section id="hero" className="relative min-h-screen flex flex-col justify-center pt-12 md:pt-16 pb-12 md:pb-16 overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-50 to-white pointer-events-none"></div>
       
-      <div className="relative section-container">
+      <div className="relative section-container flex-1 flex flex-col justify-center">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-10 md:mb-14">
             <h1 className="premium-heading mb-6 text-black">

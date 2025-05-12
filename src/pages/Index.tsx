@@ -14,16 +14,18 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Header />
-      <main className="pt-14">
+      <main>
         <Hero />
-        <ProblemSection />
-        <FalseSolutionSection />
-        <SolutionSection />
-        <AlternativeSolutionsSection />
-        <CaseStudiesSection />
-        <CTASection />
-        <div className="bg-gray-50 border-t border-gray-100">
-          <BookCallSection />
+        <div className="pt-14">
+          <ProblemSection />
+          <FalseSolutionSection />
+          <SolutionSection />
+          <AlternativeSolutionsSection />
+          <CaseStudiesSection />
+          <CTASection />
+          <div className="bg-gray-50 border-t border-gray-100">
+            <BookCallSection />
+          </div>
         </div>
       </main>
       <Footer />
