@@ -29,7 +29,7 @@ const AlternativeSolutionsSection = () => {
           
           <div className="w-full p-6">
             <img 
-              src="/firelink.png" 
+              src="/lovable-uploads/b65b326d-51f7-489b-b148-4905f9d1b92e.png" 
               alt="Twitter post showing Fiverr/Upwork expert scam" 
               className="w-full h-auto object-cover mx-auto max-h-[500px]"
               style={{ objectFit: 'contain' }}
