@@ -45,34 +45,6 @@ const SolutionSection = () => {
     }
   ];
 
-  const essentialAutomations = [
-    {
-      title: "Client Onboarding",
-      description: "Streamlined process from sign-up to campaign launch",
-      number: "1"
-    },
-    {
-      title: "Agency Dashboard",
-      description: "Custom metrics dashboard focused on your business growth",
-      number: "2"
-    },
-    {
-      title: "Campaign Monitor",
-      description: "Real-time performance tracking with automatic issue detection",
-      number: "3"
-    },
-    {
-      title: "Client Reporting",
-      description: "Weekly automated reports sent directly to clients",
-      number: "4"
-    },
-    {
-      title: "Out-of-Office Retargeting",
-      description: "Never miss an opportunity with intelligent follow-up sequences",
-      number: "5"
-    }
-  ];
-
   return (
     <section id="solution" className="py-16 bg-black text-white">
       <div className="section-container max-w-6xl mx-auto px-4">
@@ -98,23 +70,6 @@ const SolutionSection = () => {
                 <h3 className="text-xl font-semibold text-white">{item.title}</h3>
               </div>
               <p className="text-gray-300 pl-11">{item.description}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Essential Automations */}
-        <h3 className="text-2xl font-bold mb-8 text-center">5 Essential Automations Included</h3>
-        <div className="flex flex-wrap justify-center gap-6 mb-16">
-          {essentialAutomations.map((item, index) => (
-            <div 
-              key={index} 
-              className="flex flex-col w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(45%-1.5rem)] p-8 bg-transparent border border-gray-700 hover:border-gray-500 transition-all rounded-lg"
-            >
-              <div className="flex items-start space-x-4 mb-4">
-                <span className="flex items-center justify-center w-8 h-8 bg-purple-600 rounded-full text-white font-bold">{item.number}</span>
-                <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-              </div>
-              <p className="text-gray-300 pl-12">{item.description}</p>
             </div>
           ))}
         </div>
