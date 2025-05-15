@@ -75,7 +75,7 @@ const SolutionSection = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <Button onClick={scrollToBookCall} className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-6 text-lg font-bold rounded-md group">
+          <Button onClick={scrollToBookCall} className="bg-black hover:bg-gray-800 text-white px-8 py-6 text-lg font-bold rounded-md group">
             Get Your Automation System
             <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
           </Button>
