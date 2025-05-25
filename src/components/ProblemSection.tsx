@@ -4,28 +4,20 @@ import { X } from 'lucide-react';
 const ProblemSection = () => {
   const problems = [
     {
-      title: "Manual Campaign Monitoring",
-      description: "Hours spent daily checking on campaign performance that should have been automated."
+      title: "Sales Teams Drowning in Admin",
+      description: "Closers spend 70% of their time on non-revenue tasks."
     },
     {
-      title: "Inconsistent Client Reporting",
-      description: "Late or missed client updates leading to retention issues and churn."
+      title: "Process Chaos",
+      description: "Human-reliant operations cause tasks to fall through the cracks."
     },
     {
-      title: "Response Filtering Overload",
-      description: "Missing valuable leads buried in an avalanche of notifications."
+      title: "Manual Proposals Killing Momentum",
+      description: "Prospects wait days for quotes that should take minutes."
     },
     {
-      title: "Limited Team Bandwidth",
-      description: "Unable to scale operations because your team is tied up with repetitive tasks."
-    },
-    {
-      title: "No Anomaly Detection",
-      description: "Missing opportunities to fix underperforming campaigns before they waste budget."
-    },
-    {
-      title: "Scattered Key Metrics",
-      description: "Valuable data spread across multiple platforms without a unified view."
+      title: "Inconsistent Follow-Up",
+      description: "63% of interested leads lack proper follow-up without automation."
     }
   ];
 
@@ -34,11 +26,11 @@ const ProblemSection = () => {
       <div className="section-container max-w-6xl mx-auto">
         <div className="max-w-3xl mx-auto mb-12 text-center">
           <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight tracking-tight">
-            Your Lead Gen Agency is Running <span className="text-gray-300">You</span>
+            Your Sales Process is <span className="text-gray-300">Costing You Money</span>
           </h2>
           
           <p className="text-lg text-white/70">
-            Lead generation agencies face operational challenges that waste time, lose clients, and limit growth potential.
+            Manual sales processes lead to inefficiencies, lost leads, and reduced revenue.
           </p>
         </div>
         

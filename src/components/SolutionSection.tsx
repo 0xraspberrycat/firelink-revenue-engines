@@ -9,40 +9,42 @@ const SolutionSection = () => {
 
   const coreFeatures = [
     {
-      title: "Automated Lead Generation",
-      description: "Double your client acquisition with the same effort. Our cold email automation system turns your outreach into a consistent revenue machine.",
+      title: "Done For You",
+      description: "Handles technical setup so you focus on selling and scaling.",
       icon: "🚀"
     },
     {
-      title: "Lightning-Fast Response Times",
-      description: "Minimize speed-to-lead with instant follow-ups that convert prospects while they're still hot.",
+      title: "CRM Automation",
+      description: "Transforms your CRM into an automated sales engine.",
       icon: "⚡"
     },
     {
-      title: "Complete CRM Setup",
-      description: "Custom-built client relationship management system tailored to your business needs and workflow.",
+      title: "Intelligent Follow-Up",
+      description: "Ensures perfect follow-up timing without manual intervention.",
       icon: "📊"
     },
     {
-      title: "Daily Campaign Reporting",
-      description: "Get actionable insights every morning with comprehensive performance metrics for all campaigns.",
+      title: "Instant Proposals",
+      description: "Generates customized quotes the moment a prospect shows interest.",
       icon: "📈"
     },
     {
-      title: "24/7 Campaign Monitoring",
-      description: "Intelligent system that continuously monitors your campaigns and alerts you to potential issues before they impact performance.",
+      title: "Seamless Onboarding",
+      description: "Automates client onboarding after payment.",
       icon: "🔔"
-    },
-    {
-      title: "Client Portal & Weekly Reports",
-      description: "Keep your clients informed with automated weekly performance reports and a dedicated client portal.",
-      icon: "📱"
-    },
-    {
-      title: "Slack Integration",
-      description: "Seamless onboarding of new clients directly into your Slack workspace.",
-      icon: "💬"
     }
+  ];
+
+  const revenueEngineComponents = [
+    "CRM setup with automated tracking",
+    "Complete pipeline visibility",
+    "AI-powered follow-up sequences",
+    "Instant proposal generation",
+    "Automated lead qualification",
+    "24/7 sales operations",
+    "Seamless client onboarding",
+    "Automated task management",
+    "Real-time performance tracking"
   ];
 
   return (
@@ -50,10 +52,10 @@ const SolutionSection = () => {
       <div className="section-container max-w-6xl mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Double Your Clients, Double Your Cash
+            Automated Systems
           </h2>
           <p className="text-lg text-gray-300 mb-12">
-            Our Cold Email Automation System transforms your manual outreach into a fully automated revenue machine.
+            FireLink builds complete, powerful systems to automate every step of the sales cycle, allowing you to focus on selling and scaling.
           </p>
         </div>
 
@@ -72,6 +74,23 @@ const SolutionSection = () => {
               <p className="text-gray-300 pl-11">{item.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* Revenue Engine */}
+        <div className="bg-gray-900 rounded-lg p-8 mb-16">
+          <h3 className="text-2xl font-bold mb-6 text-center text-white">Revenue Engine</h3>
+          <p className="text-lg text-gray-300 mb-8 text-center">
+            Transforms manual sales processes into a fully automated revenue machine, enabling more deals with less work.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {revenueEngineComponents.map((component, index) => (
+              <div key={index} className="flex items-center space-x-3">
+                <div className="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
+                <span className="text-gray-300">{component}</span>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="mt-12 text-center">
