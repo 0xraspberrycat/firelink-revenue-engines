@@ -4,20 +4,16 @@ import { X } from 'lucide-react';
 const ProblemSection = () => {
   const problems = [
     {
-      title: "Sales Teams Drowning in Admin",
-      description: "Closers spend 70% of their time on non-revenue tasks."
+      title: "Sales Teams Drowning in Admin Tasks",
+      description: "Closers spend 70% of their time on non-revenue generating administrative work instead of closing deals."
     },
     {
-      title: "Process Chaos",
-      description: "Human-reliant operations cause tasks to fall through the cracks."
+      title: "Leads Falling Through the Cracks",
+      description: "Low show rates and poor follow-up sequences cause you to lose money on qualified prospects."
     },
     {
-      title: "Manual Proposals Killing Momentum",
-      description: "Prospects wait days for quotes that should take minutes."
-    },
-    {
-      title: "Inconsistent Follow-Up",
-      description: "63% of interested leads lack proper follow-up without automation."
+      title: "Flying Blind Without Data",
+      description: "Inaccurate reporting and scattered metrics make it impossible to make informed business decisions."
     }
   ];
 
