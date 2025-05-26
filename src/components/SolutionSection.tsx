@@ -1,37 +1,66 @@
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Clock, DollarSign, BarChart3 } from "lucide-react";
 
 const SolutionSection = () => {
   const scrollToBookCall = () => {
     document.getElementById('book-a-call')?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const coreFeatures = [
+  const pillars = [
     {
-      title: "Done For You",
-      description: "Handles technical setup so you focus on selling and scaling.",
-      icon: "🚀"
+      title: "TIME",
+      icon: <Clock className="h-8 w-8 text-blue-500" />,
+      problem: "Your reps are spending too much time on administrative tasks (data input, CRM management, etc)",
+      causes: [
+        "Human error",
+        "Things aren't tracked as well as they should be", 
+        "Your reps are spending time doing this instead of revenue generating activities"
+      ],
+      solution: "Automated system that acts as a personal assistant, handling all administrative responsibilities for your sales team",
+      features: [
+        "Pipeline/CRM tracking/updating",
+        "Prospect research", 
+        "Lead briefing",
+        "Assigning leads",
+        "Proposal generator",
+        "Invoice generator",
+        "Automated call summary system"
+      ],
+      benefit: "Save up to 10 hours per week per rep so they can focus on revenue generating activities"
     },
     {
-      title: "CRM Automation",
-      description: "Transforms your CRM into an automated sales engine.",
-      icon: "⚡"
+      title: "REVENUE", 
+      icon: <DollarSign className="h-8 w-8 text-green-500" />,
+      problem: "Losing money from low show rates, close rates, and leads falling through the cracks",
+      causes: [],
+      solution: "Comprehensive lead nurturing and pipeline optimization system",
+      features: [
+        "Nurture sequences",
+        "Confirmation reminders",
+        "Lead briefing",
+        "Lead scoring model", 
+        "Post call nurture sequences",
+        "Automated pipeline updates",
+        "Automated tasks and reminders for long term nurturing"
+      ],
+      benefit: "Maximize the ROI on your leads by converting up to 30% more"
     },
     {
-      title: "Intelligent Follow-Up",
-      description: "Ensures perfect follow-up timing without manual intervention.",
-      icon: "📊"
-    },
-    {
-      title: "Instant Proposals",
-      description: "Generates customized quotes the moment a prospect shows interest.",
-      icon: "📈"
-    },
-    {
-      title: "Seamless Onboarding",
-      description: "Automates client onboarding after payment.",
-      icon: "🔔"
+      title: "DATA",
+      icon: <BarChart3 className="h-8 w-8 text-purple-500" />,
+      problem: "Unable to make accurate business decisions due to inaccurate data and reporting", 
+      causes: [],
+      solution: "Know all of your numbers, every step of the way with AI analysis",
+      features: [
+        "Automated dashboard reporting",
+        "All in one dashboard",
+        "Live pipeline insights",
+        "Lead pipeline tracking", 
+        "Which reps are performing best",
+        "KPI tracking"
+      ],
+      benefit: "Know every single metric within your business at a glance so you know exactly what decisions to make"
     }
   ];
 
@@ -52,26 +81,57 @@ const SolutionSection = () => {
       <div className="section-container max-w-6xl mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-            Automated Systems
+            Three Pillars of Sales Automation
           </h2>
           <p className="text-lg text-gray-300 mb-12">
-            FireLink builds complete, powerful systems to automate every step of the sales cycle, allowing you to focus on selling and scaling.
+            FireLink's automation system is built on three core pillars that transform your sales operations from manual chaos into an efficient, revenue-generating machine.
           </p>
         </div>
 
-        {/* Core Features */}
-        <h3 className="text-2xl font-bold mb-8 text-center">Core Features</h3>
-        <div className="flex flex-wrap justify-center gap-6 mb-16">
-          {coreFeatures.map((item, index) => (
-            <div 
-              key={index} 
-              className="flex flex-col w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)] p-8 bg-transparent border border-gray-700 hover:border-gray-500 transition-all rounded-lg"
-            >
-              <div className="flex items-start space-x-4 mb-4">
-                <span className="text-2xl">{item.icon}</span>
-                <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+        {/* Three Pillars */}
+        <div className="space-y-12 mb-16">
+          {pillars.map((pillar, index) => (
+            <div key={index} className="bg-gray-900 rounded-lg p-8">
+              <div className="flex items-center space-x-4 mb-6">
+                {pillar.icon}
+                <h3 className="text-2xl font-bold text-white">Pillar {index + 1}: {pillar.title}</h3>
               </div>
-              <p className="text-gray-300 pl-11">{item.description}</p>
+              
+              {/* Problem */}
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-red-400 mb-3">Problem:</h4>
+                <p className="text-gray-300 mb-3">{pillar.problem}</p>
+                {pillar.causes.length > 0 && (
+                  <div>
+                    <p className="text-gray-400 mb-2">This causes:</p>
+                    <ul className="list-disc list-inside text-gray-300 space-y-1">
+                      {pillar.causes.map((cause, i) => (
+                        <li key={i}>{cause}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+
+              {/* Solution */}
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-blue-400 mb-3">Solution:</h4>
+                <p className="text-gray-300 mb-4">{pillar.solution}</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {pillar.features.map((feature, i) => (
+                    <div key={i} className="flex items-center space-x-3">
+                      <div className="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
+                      <span className="text-gray-300">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Benefit */}
+              <div className="bg-green-900/20 rounded-lg p-4 border border-green-500/30">
+                <h4 className="text-lg font-semibold text-green-400 mb-2">Benefit:</h4>
+                <p className="text-gray-300">{pillar.benefit}</p>
+              </div>
             </div>
           ))}
         </div>
