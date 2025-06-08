@@ -66,11 +66,7 @@ const Footer = () => {
                   </li>
                 ))}
               </ul>
-            </div>
-            
-            <div>
-              <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Connect</h4>
-            </div>
+            </div>            
           </div>
           
           <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
