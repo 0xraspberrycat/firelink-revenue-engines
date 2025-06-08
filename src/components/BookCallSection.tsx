@@ -43,76 +43,31 @@ const BookCallSection = () => {
         <div className="bg-white border border-gray-100 rounded-lg p-6 shadow-sm">
           <h3 className="text-xl font-semibold mb-6 text-center">Contact FireLink</h3>
           <div className="flex flex-col md:flex-row justify-center gap-10 items-stretch">
-            <div className="md:w-1/3 flex flex-col">
-              <h4 className="font-medium text-gray-800 mb-4">Call Us:</h4>
-              <a 
-                href="tel:+16122254718"
-                className="flex items-center text-gray-700 hover:text-gray-900 transition-colors"
-              >
-                <Phone className="h-5 w-5 mr-3" />
-                <span>+1 (612) 225-4718</span>
-              </a>
-            </div>
             
             <div className="md:w-1/3 flex flex-col">
               <h4 className="font-medium text-gray-800 mb-4">Email Us:</h4>
               <ul className="space-y-3">
                 <li>
                   <a 
-                    href="mailto:ermiasauto@gmail.com"
+                    href="mailto:ermias@jpstrategies.xyz"
                     className="flex items-center text-gray-700 hover:text-gray-900 transition-colors"
                   >
                     <Mail className="h-5 w-5 mr-3" />
-                    <span>ermiasauto@gmail.com</span>
+                    <span>ermias@jpstrategies.xyz</span>
                   </a>
                 </li>
                 <li>
                   <a 
-                    href="mailto:paulxautomation@gmail.com"
+                    href="mailto:paul@jpstrategies.xyz"
                     className="flex items-center text-gray-700 hover:text-gray-900 transition-colors"
                   >
                     <Mail className="h-5 w-5 mr-3" />
-                    <span>paulxautomation@gmail.com</span>
+                    <span>paul@jpstrategies.xyz</span>
                   </a>
                 </li>
               </ul>
             </div>
             
-            <div className="md:w-1/3 flex flex-col">
-              <h4 className="font-medium text-gray-800 mb-4">Find Us on X:</h4>
-              <ul className="space-y-3">
-                <li>
-                  <Button 
-                    variant="outline" 
-                    className="justify-start text-gray-700 hover:text-gray-900 w-full"
-                    asChild
-                  >
-                    <a href="https://x.com/ErmiasAuto" target="_blank" rel="noopener noreferrer">
-                      <svg className="h-5 w-5 mr-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-                      </svg>
-                      Ermias
-                      <ArrowUpRight className="ml-auto h-4 w-4" />
-                    </a>
-                  </Button>
-                </li>
-                <li>
-                  <Button 
-                    variant="outline" 
-                    className="justify-start text-gray-700 hover:text-gray-900 w-full"
-                    asChild
-                  >
-                    <a href="https://x.com/paulautomates" target="_blank" rel="noopener noreferrer">
-                      <svg className="h-5 w-5 mr-3" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path>
-                      </svg>
-                      Paul
-                      <ArrowUpRight className="ml-auto h-4 w-4" />
-                    </a>
-                  </Button>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>
