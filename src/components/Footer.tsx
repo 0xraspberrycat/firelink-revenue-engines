@@ -70,28 +70,6 @@ const Footer = () => {
             
             <div>
               <h4 className="text-sm font-semibold uppercase tracking-wider mb-4">Connect</h4>
-              <ul className="space-y-2">
-                <li>
-                  <a href="mailto:ermiasauto@gmail.com" className="text-gray-300 hover:text-white transition-colors">
-                    Email (Ermias)
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:paulxautomation@gmail.com" className="text-gray-300 hover:text-white transition-colors">
-                    Email (Paul)
-                  </a>
-                </li>
-                <li>
-                  <a href="https://x.com/ErmiasAuto" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                    X (Ermias)
-                  </a>
-                </li>
-                <li>
-                  <a href="https://x.com/paulautomates" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white transition-colors">
-                    X (Paul)
-                  </a>
-                </li>
-              </ul>
             </div>
           </div>
           
